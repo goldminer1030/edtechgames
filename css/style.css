@@ -6,10 +6,10 @@ padding: 0 15px;
 height: 96px;
 }
 #header-main .navbar-default {
-background-color: rgba(255,255,255,.8);
-height: 51px;
-margin-bottom: 0;
-border: none;
+  background-color: #ffffff;
+  height: 51px;
+  margin-bottom: 0;
+  border: none;
 }
 #header-main .scroll-new {
 background: transparent linear-gradient(180deg, #fff 65%, transparent 0) repeat scroll 0 0;
@@ -39,6 +39,11 @@ outline: none;
 #header-main .navbar-nav .logo a {
 padding: 0 70px;
 }
+/* YTPlayer below header */
+#YTPlayer-container {
+  top: 51px !important;
+}
+
 #replacement_video {
 display: none;
 }
@@ -290,9 +295,11 @@ footer .container {
 .info-section .sub-details {
   padding: 50px 30px 0 30px;
 }
-.info-section .sub-details,
+.info-section .sub-details {
+  height: 75vh;
+}
 .info-section .sub-character {
-  height: 50vh;
+  height: 25vh;
 }
 .info-section .sub-character.right-character {
   padding-left: 0;
@@ -301,23 +308,23 @@ footer .container {
   padding-right: 0;
 }
 .info-section .sub-details .sub-detail-text {
-  height: 32vh;
+  height: 50vh;
 }
 .info-section .sub-details .sub-detail-text h1 {
   text-transform: capitalize;
-  font-size: calc(24px + 24 * ((100vw - 320px) / 1280));
+  font-size: calc(26px + 28 * ((100vw - 320px) / 1280));
   /* line-height: calc(27px + 32 * ((100vw - 320px) / 1280)); */
 }
 .info-section .sub-details .sub-detail-text h2 {
-  font-size: calc(17px + 19 * ((100vw - 320px) / 1280));
+  font-size: calc(20px + 20 * ((100vw - 320px) / 1280));
   /* line-height: calc(18px + 30 * ((100vw - 320px) / 1280)); */
 }
 .info-section .sub-details .sub-detail-text p {
-  font-size: calc(12px + 16 * ((100vw - 320px) / 1280));
+  font-size: calc(15px + 20 * ((100vw - 320px) / 1280));
   text-align: justify;
 }
 .info-section .sub-details .sub-detail-screenshots {
-  height: calc(18vh - 75px);
+  height: calc(25vh - 75px);
 }
 .info-section .sub-details .sub-detail-screenshots .screenshot {
   display: block;
@@ -369,32 +376,6 @@ footer .container {
 #section5.contact-main .parts-all {
   background-color: transparent;
 }
-
-/* #slide1{
-  background-image: url(../images/shrine1c.png);
-  background-size: cover;
-  background-position: center;
-}
-#slide2{
-  background-image: url(../images/customcharacter1_new.png);
-  background-size: cover;
-  background-position: center;
-}
-#slide3{
-  background-image: url(../images/grodpole1_new.png);
-  background-size: cover;
-  background-position: center;
-}
-#slide4{
-  background-image: url(../images/shrine1c2_new.png);
-  background-size: cover;
-  background-position: center;
-}
-#slide5{
-  background-image: url(../images/story1_new_new.png);
-  background-size: cover;
-  background-position: center;
-} */
 
 /* fluid box */
 .fluidbox__overlay {
@@ -583,18 +564,27 @@ footer .container {
   opacity: 1;
 }
 /* meida queries */
+@media screen and (max-width: 992px) {
+  .col-xs-4.sc-wrapper,
+  .col-xs-3.sc-wrapper {
+    padding: 0 5px;
+  }
+}
 @media screen and (min-width: 600px) {
   .info-section .sub-details .sub-detail-text {
-    height: 33vh;
+    height: 45vh;
   }
   .info-section .sub-details .sub-detail-screenshots {
-    height: calc(17vh - 75px);
+    height: calc(20vh - 75px);
   }
   .info-section .sub-details {
     padding-top: 0;
   }
-  .info-section .sub-details, .info-section .sub-character {
-      height: 45vh;
+  .info-section .sub-details {
+    height: 60vh;
+  }
+  .info-section .sub-character {
+    height: 30vh;
   }
 }
 @media (min-width: 768px) {
@@ -603,6 +593,9 @@ footer .container {
   }
   #header-main .navbar-nav > li a {
     color: #000;
+  }
+  #YTPlayer-container {
+    top: 66px !important;
   }
   .info-section .sub-details,
   .info-section .sub-character {
@@ -700,20 +693,15 @@ footer .container {
     margin-bottom: 0;
   }  
   .info-section .sub-details .sub-detail-text {
-    height: 62vh;
+    height: 68vh;
   }
   .info-section .sub-details .sub-detail-screenshots {
-    height: calc(38vh - 100px);
+    height: calc(32vh - 100px);
   }
   .info-section .sub-details .sub-detail-screenshots .screenshot.lightbox-video .play-btn {
     font-size: 43px;
   }
   .info-section .sub-details .sub-detail-screenshots .screenshot.lightbox-video:hover .play-btn {
     font-size: 48px;
-  }
-}
-@media (min-width: 1400px) {
-  .info-section .sub-details .sub-detail-screenshots {
-    height: calc(38vh - 100px);
   }
 }

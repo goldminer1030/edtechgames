@@ -94,12 +94,12 @@
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
-                  <div class="col-xs-6">
+                  <div class="col-xs-6 sc-wrapper">
                     <a class="screenshot" href="images/boybot1.png">
                       <img src="images/boybot1.png" alt="screenshot">
                     </a>
                   </div>
-                  <div class="col-xs-6">
+                  <div class="col-xs-6 sc-wrapper">
                     <a class="screenshot" href="images/unit2.png">
                       <img src="images/unit2.png" alt="screenshot">
                     </a>
@@ -131,17 +131,17 @@
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
-                  <div class="col-xs-4">
+                  <div class="col-xs-4 sc-wrapper">
                     <a class="screenshot" href="images/1.png">
                       <img src="images/1.png" alt="screenshot">
                     </a>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-4 sc-wrapper">
                     <a class="screenshot" href="images/2.png">
                       <img src="images/2.png" alt="screenshot">
                     </a>
                   </div>
-                  <div class="col-xs-4">
+                  <div class="col-xs-4 sc-wrapper">
                     <a class="screenshot" href="images/3.png">
                       <img src="images/3.png" alt="screenshot">
                     </a>
@@ -173,22 +173,22 @@
               </div>
               <div class="sub-detail-screenshots four-screenshots">
                 <div class="row">
-                  <div class="col-xs-3 col-sm-6 col-lg-3">
+                  <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot" href="images/image02.png">
                       <img src="images/1.png" alt="screenshot">
                     </a>
                   </div>
-                  <div class="col-xs-3 col-sm-6 col-lg-3">
+                  <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot" href="images/image03.png">
                       <img src="images/2.png" alt="screenshot">
                     </a>
                   </div>
-                  <div class="col-xs-3 col-sm-6 col-lg-3">
+                  <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot" href="images/image04.png">
                       <img src="images/3.png" alt="screenshot">
                     </a>
                   </div>
-                  <div class="col-xs-3 col-sm-6 col-lg-3">
+                  <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot lightbox-video" href="https://www.youtube.com/watch?v=go-OKanl3kI" title="Video Play">
                       <img src="images/4.png" alt="screenshot">
                       <i class="fa fa-play-circle-o play-btn"></i>
@@ -254,7 +254,7 @@
                 <div class="form-wrapper">
                   <p class="form-title">Request to Pilot</p>
                   <div class="message hidden-div">Form Submitted</div>
-                  <form id="contact_form" name="myForm" action="secure_email.php" method="POST">
+                  <form id="contact_form" name="myForm" action="/sendinblue_email.php" method="POST">
                     <div class="form-group">
                       <input type="text" name="vname" class="form-control" id="user_name" placeholder="Enter Name">
                       <span class="form-error" id="vname-error"></span>

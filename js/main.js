@@ -56,7 +56,7 @@ $(document).ready(function () {
     anchors: ['heroVideo', 'intenseEngagement', 'cuttingEdgeCurriculum', 'vastlyHigherEfficacy', 'screenshots', 'contact'],
     responsiveWidth: 1,
     responsiveHeight: 1,
-    sectionsColor: ['', '', '', '', '#D3D3D3', ''],
+    sectionsColor: ['', '', '', '', '#000', ''],
     navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['Hero Video', 'Intense Engagement', 'Cutting Edge Curriculum', 'Vastly Higher Efficacy', 'Screenshots', 'Contact'],
@@ -137,7 +137,7 @@ $(document).ready(function () {
   update_fontsize();
 
   // free wall
-  $('#part_four .brick').each(function() {
+  $('#part_four .brick').each(function(e) {
     var h = 1 + 5 * Math.random() << 0;
     var w = 1 + 6 * Math.random() << 0;
     var imageUrl = $(this).data('background');
@@ -170,11 +170,29 @@ $(document).ready(function () {
     cellH: 200,
     delay: 30,
     onResize: function () {
-      wall.refresh($(window).width(), $(window).height());
+      var window_width = $(window).width(), window_height = $(window).height();
+      if (window_height >= 768) {
+        // if desktop screen
+        // subtract desktop header height
+        wall.refresh(window_width - 30, window_height - 96);
+      } else {
+        // if mobile screen
+        // subtract mobile header height
+        wall.refresh(window_width - 30, window_height - 65);
+      }
     }
   });
   // caculator width and height for IE7;
-  wall.fitZone($(window).width(), $(window).height());
+  var window_width = $(window).width(), window_height = $(window).height();
+  if (window_height >= 768) {
+    // if desktop screen
+    // subtract desktop header height
+    wall.fitZone(window_width - 30, window_height - 96);
+  } else {
+    // if mobile screen
+    // subtract mobile header height
+    wall.fitZone(window_width - 30, window_height - 65);
+  }
 
   // form validate
   jQuery.validator.addMethod("validEmail", function (value, element) {
@@ -234,10 +252,11 @@ $(document).ready(function () {
       var vemail = $("#vemail").val();
       var message = $("#message").val();
       $.ajax({
-        url: "mailgun/mail.php",
+        url: "/sendinblue_email.php",
         type: "POST",
         data: $(form).serialize(),
         success: function (response) {
+          console.log(response);
           $("#contact_form")[0].reset();
           $(".message").removeClass("hidden-div")
           $(".bottom-from").html("<div class='col-md-12 message'>Your message has been sent successfully.</div>");

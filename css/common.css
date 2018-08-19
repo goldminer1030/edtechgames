@@ -11,14 +11,20 @@
     display: inline-block;
     width: 100%;
     float: left;
-    background-color: #fff;
+    background-color: #000;
 }
 
 #part_one,
+#part_two,
 #part_three {
     background-color: #D3D3D3;
 }
 
+#part_four {
+    margin-top: 65px;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
 .blue-text {
     color: #00b1db;
 }
@@ -204,10 +210,6 @@ div#section7 {
     background: #191919;
 }
 /*----2_july_18-start--------*/
-#section5, #section6, .mydiv .col-md-4.col-sm-4{
-    margin-top: -3px;
-}
-
 .mydiv .abc .full_text .abcd .intro-1 h2 {
     margin: 0;
 }
@@ -261,64 +263,6 @@ section#part_one .demo center a:nth-child(1) .fluidbox__wrap img, section#part_o
     clear: left;
 }
 }
-
-/* @media screen and (min-width: 768px) and (max-width: 1199px){
-
-.my_img, .full_text {
-    height: auto;
-}
-section#part_one .demo center a:nth-child(1) .fluidbox__wrap img, section#part_one .demo center a:nth-child(2) .fluidbox__wrap img {
-    width: 90% !important;
-    height: auto;
-}
-.fluidbox__instance-10 {
-    clear: left;
-} */
-/* .img-two_1{
-	display:none;
-}
-.img-two_2{
-	display:block;
-	margin-top: -30px;
-} */
-/* section#part_one .demo center a:nth-child(1) .fluidbox__wrap img, section#part_one .demo center a:nth-child(2) .fluidbox__wrap img {
-    width: 90% !important;
-}
-.fluidbox__instance-4 img {
-    height: 246px !important;
-}
-.col-md-7.col-sm-7.wow.bounceInLeft.full_text {
-    width: 68%;
-    float: left;
-}
-
-.col-md-5.col-sm-5.wow.bounceInRight.my_img {
-    padding: 0;
-    width: 29%;
-}
-
-.my_img .cartoon-1 img {
-    min-height: auto;
-}
-.demo center {
-    display: flex !important;
-    align-items: center;
-}
-.intro-1 h1, .intro-2 h1, .intro-3 h1 {
-    font-size: 30px;
-}
-.intro-1 h2, .intro-2 h2, .intro-3 h2 {
-    font-size: 18px;
-}
-.intro-1 p, .intro-2 p, .intro-3 p {
-    font-size: 14px;
-    line-height: 22px;
-    margin: 9px 0 0 0;
-}
-.img-two_2.col-md-12.col-sm-12.wow.bounceInLeft.full_text {
-    margin-top: 15px;
-}
-} */
 
 /*----2_july_18-end--------*/
 /*----4_july_18-start--------*/
@@ -425,43 +369,6 @@ width: 60%;
 }
 }
 
-/*----4_july_18-end--------*/
-
-/*----5_july_18-end--------*/
-/* @media screen and (min-width: 1400px) {
-#section1 .col-md-5.col-sm-5.wow.bounceInRight.my_img {
-    background: url("https://edtechgames.com/tempsite1/images/Rocko.png");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-}
-#section2 .col-md-5.col-sm-5.wow.bounceInLeft.my_img {
-    background: url("https://edtechgames.com/tempsite1/images/character02.png");
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-#section3 .col-md-5.col-sm-5.wow.bounceInRight.my_img {
-    background: url("https://edtechgames.com/tempsite1/images/character03.png");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-}
-.intro-1 p, .intro-2 p, .intro-3 p {
-    font-size: 35px;
-    line-height: normal;
-    margin: 19px 0 0 0;
-}
-.intro-1 h1, .intro-2 h1, .intro-3 h1 {
-    font-size: 90px;
-}
-.intro-1 h2, .intro-2 h2, .intro-3 h2 {
-    font-size: 36px;
-}
-.cartoon-1 {
-    display: none;
-}
-} */
-
-/*----5_july_18-end--------*/
-
 /*----10_july_18-start--------*/
 .intro-1 p, .intro-2 p, .intro-3 p {
     font-size: 1.5vw;
@@ -485,28 +392,31 @@ section#part_one .demo center {
     display: flex;
 }
 
-@media screen and (min-width:767px) {
+@media screen and (min-width: 768px) {
+    #part_four {
+        margin-top: 81px;
+    }
 	.intro-1 p, .intro-2 p, .intro-3 p {
-    font-size: 1.5vw;
-}
+        font-size: 1.5vw;
+    }
 
-.intro-1 h2, .intro-2 h2, .intro-3 h2 {
-    font-size: 1.8vw;
-}
-.intro-1 h1, .intro-2 h1, .intro-3 h1 {
-    font-size: 3vw;
-}
-.img-two {
-    float: left;
-    width: 42vw;
-}
-.my_img .cartoon-1 img {
-    width: 100%;
-	height: 90vh;
-}
-section#part_one .demo center {
-    display: flex;
-}
+    .intro-1 h2, .intro-2 h2, .intro-3 h2 {
+        font-size: 1.8vw;
+    }
+    .intro-1 h1, .intro-2 h1, .intro-3 h1 {
+        font-size: 3vw;
+    }
+    .img-two {
+        float: left;
+        width: 42vw;
+    }
+    .my_img .cartoon-1 img {
+        width: 100%;
+        height: 90vh;
+    }
+    section#part_one .demo center {
+        display: flex;
+    }
 	
 }
 /*----10_july_18-end--------*/
