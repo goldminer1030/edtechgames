@@ -240,9 +240,6 @@ footer p {
 #header-main .navbar-nav .logo a {
   padding: 0 35px;
 }
-#video-sect .content-overhead {
-  bottom: 20%;
-}
 }
 @media (min-width: 1025px) {
 #video-sect {

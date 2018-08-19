@@ -43,7 +43,7 @@
               <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Video</a></li>
               <li class="hidden-xs logo"><a href="index.php"><img src="images/logo-edtech.png" alt="Brand"/></a></li>
               <li><a href="https://edtechgames.com/login" target="_blank">Reports</a></li>
-              <li><a href="contactus.html" target="_blank">Pilot</a></li>
+              <li><a href="#contact">Pilot</a></li>
             </ul>
           </div>
         </div>
