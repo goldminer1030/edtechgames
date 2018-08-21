@@ -46,10 +46,10 @@ $(document).ready(function () {
     start: 0,
     fitToBackground: true
   });
-  
+
   // hide characters in info sections
   $('.info-section .sub-character').addClass("invisible");
-  
+
   // full page js
   var myFullpage = new fullpage('#fullpage', {
     verticalCentered: true,
@@ -137,7 +137,7 @@ $(document).ready(function () {
   update_fontsize();
 
   // free wall
-  $('#part_four .brick').each(function(e) {
+  $('#part_four .brick').each(function (e) {
     var h = 1 + 5 * Math.random() << 0;
     var w = 1 + 6 * Math.random() << 0;
     var imageUrl = $(this).data('background');
@@ -163,6 +163,7 @@ $(document).ready(function () {
   });
 
   var wall = new Freewall("#part_four");
+  var fix_step = 1, header_lg = 81, header_sm = 50, wall_gap = 15;
   wall.reset({
     selector: '.brick',
     animate: true,
@@ -170,29 +171,36 @@ $(document).ready(function () {
     cellH: 200,
     delay: 30,
     onResize: function () {
-      var window_width = $(window).width(), window_height = $(window).height();
-      if (window_height >= 768) {
-        // if desktop screen
-        // subtract desktop header height
-        wall.refresh(window_width - 30, window_height - 96);
-      } else {
-        // if mobile screen
-        // subtract mobile header height
-        wall.refresh(window_width - 30, window_height - 65);
+      var window_width = $(window).width(), window_height = $(window).height(),
+        header_h = window_height >= 768 ? header_lg : header_sm;
+
+      wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
+    },
+    onComplete: function() {
+      if(fix_step > 0) {
+        /**
+         * to fix the masonry gap issue when scroll up and down
+         */
+        var window_width = $(window).width(), window_height = $(window).height(),
+          header_h = window_height >= 768 ? header_lg : header_sm;
+        switch(fix_step) {
+          case 1:
+            wall.refresh(600, window_height - header_h - wall_gap);
+            fix_step = 2;
+          break;
+          case 2:
+            wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
+            fix_step = 0;
+          break;
+        }
       }
     }
   });
   // caculator width and height for IE7;
-  var window_width = $(window).width(), window_height = $(window).height();
-  if (window_height >= 768) {
-    // if desktop screen
-    // subtract desktop header height
-    wall.fitZone(window_width - 30, window_height - 96);
-  } else {
-    // if mobile screen
-    // subtract mobile header height
-    wall.fitZone(window_width - 30, window_height - 65);
-  }
+  var window_width = $(window).width(), window_height = $(window).height(),
+    header_h = window_height >= 768 ? header_lg : header_sm;
+
+  wall.fitZone(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
 
   // form validate
   jQuery.validator.addMethod("validEmail", function (value, element) {
@@ -239,11 +247,16 @@ $(document).ready(function () {
       vre_email: "Please enter same email",
       message: "Please enter your message"
     },
-    highlight: function (jv_element) {
-      jQuery(jv_element).closest('.form-control').removeClass('has-success').addClass('has-error');
+    validClass: "has-success",
+    errorClass: "has-error",
+    highlight: function (element, errorClass, validClass) {
+      $(element).addClass(errorClass).removeClass(validClass);
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass(errorClass).addClass(validClass);
     },
     success: function (jv_element) {
-      jv_element.closest('.form-control').removeClass('has-error').addClass('has-success');
+      jv_element.siblings('.form-control').removeClass('has-error').addClass('has-success');
     },
     submitHandler: function (form) {
       //form.submit();

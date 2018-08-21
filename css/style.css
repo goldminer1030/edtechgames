@@ -514,6 +514,11 @@ footer .container {
   height: 100vh;
 }
 
+#contact_form input.has-error,
+#contact_form textarea.has-error {
+  border: 2px solid red;
+}
+
 .brick {
   position: relative;
   background-position: center center;

@@ -1,40 +1,19 @@
-<?php
+<!DOCTYPE html>
+<html>
 
-include 'mailin-api/Mailin.php';
+<head lang="en-us">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="author" content="Edtech Games">
+  <meta name="description" content="Edtech Games">
+  <meta name="keywords" content="Edtech Games">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-$vname          = $_POST['vname']; // required
-$vemail         = $_POST['vemail']; // required
-$vrole          = $_POST['vrole']; // required
-$message        = $_POST['message']; // required
-$email_message  = "<p>Form details below:</p>";
+  <title>Welcome to Edtech Games!</title>
 
-$email_message .= "<p><strong>Name:</strong> ".$vname."</p>";
-$email_message .= "<p><strong>Email:</strong> ".$vemail."</p>";
-$email_message .= "<p><strong>Role:</strong> ".$vrole."</p>";
-$email_message .= "<p><strong>Message:</strong> ".$message."</p>";
+</head>
 
-$mailin = new Mailin('ben@edtechgames.com', 'nAjbFy6CaGtNhPQp');
-$mailin->
-addTo('contact@edtechgames.com', 'Ben Harrison')->
-setFrom('contact@edtechgames.com', 'Ben Harrison')->
-setReplyTo('contact@edtechgames.com','Ben Harrison')->
-setSubject('Request to Pilot')->
-setText("Text")->
-setHtml('<strong>Hello</strong><br>' . $email_message);
-$res = $mailin->send();
-/**
-Successful send message will be returned in this format:
-{'result' => true, 'message' => 'Email sent'}
-*/
-
-//--> send welcome email
-$mailin->
-addTo($vemail, 'Ben Harrison')->
-setFrom('contact@edtechgames.com', 'Ben Harrison')->
-setReplyTo('contact@edtechgames.com','Ben Harrison')->
-setSubject('Welcome to EdtechGames')->
-setHtml('
-<table style="width: 100%; max-width: 580px; display: block;" align="center" cellpadding="0" cellspacing="0">
+<body style="margin: 0; padding: 0;">
+  <table style="width: 100%; max-width: 580px; display: block;" align="center" cellpadding="0" cellspacing="0">
     <tr>
       <td style="text-align: center;">
         <img src="https://edtechgames.com/images/logo_sm.png" alt="logo" border="0">
@@ -42,7 +21,7 @@ setHtml('
     </tr>
     <tr>
       <td>
-        <h1 style="color:#00b1db; font-size: 36px; text-align: center; text-transform: capitalize;">Hi ' . $vname . '!</h1>
+        <h1 style="color:#00b1db; font-size: 36px; text-align: center; text-transform: capitalize;">Hi Matthew Smith!</h1>
       </td>
     </tr>
     <tr>
@@ -119,7 +98,6 @@ setHtml('
       </td>
     </tr>
   </table>
-');
+</body>
 
-$res = $mailin->send();
-//<-- send welcome email
+</html>
