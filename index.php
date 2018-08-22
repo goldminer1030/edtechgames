@@ -86,11 +86,9 @@
           <div class="row">
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text">
-                <h1><span class="blue-text">intense<br></span>engagement</h1>
-                <h2>Intense engagement enables intense learning!</h2>
-                <p>
-                  Great teachers are vividly aware that children learn much more effectively when they are highly engaged. Highly engaged students pay greater attention and  work significantly harder.  Worksheets and 2D graphics simply can't generate the intense engagement that high-end content can. But don't take our word for it. See for yourself how much more effectively students learn when immersed in our truly high-end educational gameplay.
-                </p>
+                <h1><span class="blue-text">Intense</span> Engagement Enables <span class="blue-text">Intense</span> Learning</h1>
+                <p>Any program can keep a student amused and interactive. That's just not enough. Our high-end gameplay provides an extra level of engagement that enables them to work <b>intensely</b> on our very rigorous, powerful curriculum.<br><br> 
+                But you'll have to see it for yourself to believe it. So grab a student and watch how they learn in our program.</p>
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
@@ -119,15 +117,10 @@
             <div class="col-md-7 col-md-push-5 col-sm-6 col-sm-push-6 sub-details left-side">
               <div class="sub-detail-text">
                 <h1>
-                  <span class="blue-text">cutting
-                    <br>
-                  </span>edge curriculum
+                  <span class="blue-text">Unique</span> Learning-Centric Curriculum
                 </h1>
-                <h2>Intense engagement allows us to pioneer more intense curriculum.</h2>
-                <p>Don't let our eye-candy fool you— it's only a means to an end. The critical reason for creating such high-end gameplay is
-                  that it frees us to pioneer more robust, rigorous curricula than simple 2D gameplay could sustain. But again, don't take
-                  our word for it. Watch one of your students play through our content and see for yourself how effectively our dynamic learning
-                  process smoothly develops deep comprehension and flexible, fluent problem solving.</p>
+                <p>Our hands-on curriculum enables a student to incrementally <b>experience</b> mathematic concepts for themselves. They incrementally and efficiently <b>build</b> each piece of understanding so they know <b>why</b>the math works. Then they fluidly progress to purely mathematical manipulations and then diverse problem solving applications.<br><br>
+                We support 25 languages (both text and audio) and offer insightful reporting, placement assessments and adaptive content.</p>
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
@@ -161,15 +154,9 @@
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text four-screenshots">
                 <h1>
-                  <span class="blue-text">vastly
-                    <br>
-                  </span>higher efficacy</h1>
-                <h2>Higher Engagement + Better Curriculum = Vastly Higher Efficacy</h2>
-                <p>Data. Results. Isn't that what it's all about? Doesn't EVERYONE claim to be "next-gen" and "cutting-edge?" It's pretty obvious
-                  that we're genuinly providing a whole different calibre of EdTech game, but what does the research say? Being very blunt,
-                  we don't know yet because our initial studies are still getting off the ground. But our previous product, now Imagine Math
-                  Facts, generated some excellent
-                  <a href="https://doi.org/10.1007/s10864-017-9288-1" target="_blank">research results</a> and we expect this product to generate even better results.</p>
+                  <span class="blue-text">Ready</span> for High Stakes Tests</h1>
+                <p>The whole point of this program is to ensure that when your students finish, they're <b>ready</b> for their End of Grade test; or they're genuinely ready for new year's content. We're challenging and we're rigorous, but we will get your students where you really want them to be. <br>
+                <br><b>Research Results</b><br>In our first randomized study with a control group, students who played our Fractions game for two hours improved <b>9%</b> more than the control group. <b>16%</b> if you remove outliers and students already scoring above 90%!</p>
               </div>
               <div class="sub-detail-screenshots four-screenshots">
                 <div class="row">

@@ -308,7 +308,7 @@ footer .container {
   height: 50vh;
 }
 .info-section .sub-details .sub-detail-text h1 {
-  text-transform: capitalize;
+  /*text-transform: capitalize;*/
   font-size: calc(26px + 28 * ((100vw - 320px) / 1280));
   /* line-height: calc(27px + 32 * ((100vw - 320px) / 1280)); */
 }
@@ -319,6 +319,7 @@ footer .container {
 .info-section .sub-details .sub-detail-text p {
   font-size: calc(15px + 20 * ((100vw - 320px) / 1280));
   text-align: justify;
+  padding-right: 100;
 }
 .info-section .sub-details .sub-detail-screenshots {
   height: calc(25vh - 75px);
