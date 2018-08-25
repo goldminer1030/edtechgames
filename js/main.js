@@ -1,21 +1,60 @@
+var wall;
+
 /**
  * update_fontsize function
  */
 var update_fontsize = function () {
-  $(".info-section .sub-details .sub-detail-text").each(function () {
-    var divHeight = $(this).height();
-    var h1Height = $(this).children('h1').outerHeight(true);
-    var h2Height = $(this).children('h2').outerHeight(true);
-    var expected_pHeight = divHeight - h1Height - h2Height;
-    var current_pHeight = $(this).children('p').outerHeight(true);
-    var current_lineHeight = parseFloat($(this).children('p').css('line-height'));
+  $(".info-section").each(function () {
+    var window_width = $(window).width(),
+      window_height = $(window).height(),
+      wrapper_top_gap = parseFloat($(this).find('.parts-all').css('padding-top')),
+      heading_height = $(this).find('h1').outerHeight(true),
+      top_gap = wrapper_top_gap + heading_height,
+      sub_details = $(this).find('.sub-details'),
+      sub_details_text = $(this).find('.sub-details .sub-detail-text'),
+      sub_details_image = $(this).find('.sub-details .sub-detail-screenshots'),
+      paragraph = $(this).find('.sub-details .sub-detail-text p'),
+      sub_character = $(this).find('.sub-character'),
+      testimonial_height = $(this).find('.testimonial-wrapper').outerHeight(true);
+
+    if(window_width < 768) {
+      // mobile screen
+      // text
+      sub_details.css("height", "calc(62vh - " + top_gap + "px)");
+      sub_details_text.css("height", "30vh");
+      sub_details_image.css("height", "calc(30vh - " + top_gap + "px)");
+      sub_character.css("height", "38vh");
+    } else {
+      // desktop screen
+      sub_details.css("height", "calc(100vh - " + top_gap + "px)");
+      sub_details_text.css("height", "calc(75vh - " + top_gap + "px)");
+      sub_details_image.css("height", "25vh");
+      sub_character.css("height", "calc(100vh - " + top_gap + "px)");
+    }
+    // character
+    var img_w = parseInt(sub_character.find('img').css('width')),
+        img_h = parseInt(sub_character.find('img').css('height')),
+        container_w = sub_character.width(),
+        container_h = sub_character.height(),
+        character_height = sub_character.height() - testimonial_height,
+        character_width = img_w * character_height / img_h;
+    // if character width is larger than container
+    if (character_width > container_w) {
+      character_width = container_w;
+      character_height = img_h * character_width / img_w;
+    }
+    sub_character.find('img').css('height', character_height + 'px');
+
+    // text
+    var divHeight = sub_details_text.height();
+    var expected_pHeight = divHeight;
+    var current_pHeight = paragraph.outerHeight(true);
+    var current_lineHeight = parseFloat(paragraph.css('line-height'));
     var expected_lines = parseInt(expected_pHeight / current_lineHeight);
     var current_lines = parseInt(current_pHeight / current_lineHeight);
-    var expected_lineHeight = parseFloat(expected_pHeight / current_lines);
-    $(this).children('p').css("line-height", expected_lineHeight + "px");
+    var expected_lineHeight = parseFloat(expected_pHeight / (current_lines + 1));
+    paragraph.css("line-height", expected_lineHeight + "px");
     // console.log('height:', divHeight);
-    // console.log("h1 height: " + h1Height);
-    // console.log("h2 height: " + h2Height);
     // console.log("p height: " + current_pHeight);
     // console.log('lineHeight:', current_lineHeight);
     // console.log("expected Lines: " + expected_lines);
@@ -137,11 +176,17 @@ $(document).ready(function () {
   update_fontsize();
 
   // free wall
+  //calculate rate
+  var window_width = $(window).width(), window_height = $(window).height(),
+    brick_max_w = window_width / 3, brick_max_h = window_height / 4,
+    brick_unit_w = parseInt(window_width / 12),
+    rate = brick_max_w / brick_max_h;
+  
   $('#part_four .brick').each(function (e) {
-    var h = 1 + 5 * Math.random() << 0;
-    var w = 1 + 6 * Math.random() << 0;
+    var h = 1 + 10 * Math.random() << 0,
+        w = h * rate;
     var imageUrl = $(this).data('background');
-    var r_w = w * 200, r_h = h * 200;
+    var r_w = w * brick_unit_w, r_h = h * brick_unit_w;
 
     $(this).css({
       'width': r_w + 'px',
@@ -162,13 +207,19 @@ $(document).ready(function () {
     });
   });
 
-  var wall = new Freewall("#part_four");
-  var fix_step = 1, header_lg = 81, header_sm = 50, wall_gap = 15;
+  wall = new Freewall("#part_four");
+  var fix_step = 1, header_lg = 81, header_sm = 50, wall_gap = 15, cell_w = 200;
   wall.reset({
     selector: '.brick',
     animate: true,
-    cellW: 200,
-    cellH: 200,
+    cellW: function (width) {
+      var cellWidth = width / 3;
+      return cellWidth - 20;
+    },
+    cellH: function (height) {
+      var cellHeight = height / 4;
+      return cellHeight - 20;
+    },
     delay: 30,
     onResize: function () {
       var window_width = $(window).width(), window_height = $(window).height(),

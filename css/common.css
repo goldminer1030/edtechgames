@@ -300,9 +300,6 @@ section#part_one .demo center a:nth-child(1) .fluidbox__wrap img, section#part_o
     text-align: center;
     width: 100%;
 }
-#part_one, #part_two, #part_three {
-    padding: 0;
-}
 .intro-1 p, .intro-2 p, .intro-3 p {
     font-size: 14px;
     line-height: 22px;

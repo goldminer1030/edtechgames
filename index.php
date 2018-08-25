@@ -83,10 +83,10 @@
       </div>
       <div class="section info-section" id="section1">
         <section class="parts-all parallax mydiv" id="part_one">
+          <h1><span class="blue-text">Intense</span> Engagement Enables <span class="blue-text">Intense</span> Learning</h1>
           <div class="row">
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text">
-                <h1><span class="blue-text">Intense</span> Engagement Enables <span class="blue-text">Intense</span> Learning</h1>
                 <p>Any program can keep a student amused and interactive. That's just not enough. Our high-end gameplay provides an extra level of engagement that enables them to work <b>intensely</b> on our very rigorous, powerful curriculum.<br><br> 
                 But you'll have to see it for yourself to believe it. So grab a student and watch how they learn in our program.</p>
               </div>
@@ -106,19 +106,25 @@
               </div>
             </div>
             <div class="col-md-5 col-sm-6 sub-character right-character" data-animation="bounceInRight">
-              <img src="images/Rocko.png" alt="character">
+              <div class="character">
+                <div class="testimonial-wrapper">
+                  <div class="testimonial">
+                    <p class="quote">"Here's a really cool quote. It was the greatest thing ever!"</p>
+                    <p class="client-name">- Jone Doe</p>
+                  </div>
+                </div>
+                <img src="images/Rocko.png" alt="character">
+              </div>
             </div>
           </div>
         </section>
       </div>
       <div class="section info-section" id="section2">
         <section class="parts-all mydiv" id="part_two">
+          <h1><span class="blue-text">Unique</span> Learning-Centric Curriculum</h1>
           <div class="row">
             <div class="col-md-7 col-md-push-5 col-sm-6 col-sm-push-6 sub-details left-side">
               <div class="sub-detail-text">
-                <h1>
-                  <span class="blue-text">Unique</span> Learning-Centric Curriculum
-                </h1>
                 <p>Our hands-on curriculum enables a student to incrementally <b>experience</b> mathematic concepts for themselves. They incrementally and efficiently <b>build</b> each piece of understanding so they know <b>why</b>the math works. Then they fluidly progress to purely mathematical manipulations and then diverse problem solving applications.<br><br>
                 We support 25 languages (both text and audio) and offer insightful reporting, placement assessments and adaptive content.</p>
               </div>
@@ -143,18 +149,25 @@
               </div>
             </div>
             <div class="col-md-5 col-md-pull-7 col-sm-6 col-sm-pull-6 sub-character left-character" data-animation="bounceInLeft">
-              <img src="images/character02.png" alt="character">
+              <div class="character">
+                <img src="images/character02.png" alt="character">
+                <div class="testimonial-wrapper">
+                  <div class="testimonial">
+                    <p class="quote">"Here's a really cool quote. It was the greatest thing ever!"</p>
+                    <p class="client-name">- Jone Doe</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
       </div>
       <div class="section info-section" id="section3">
         <section class="parts-all mydiv" id="part_three">
+          <h1><span class="blue-text">Ready</span> for High Stakes Tests</h1>
           <div class="row">
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text four-screenshots">
-                <h1>
-                  <span class="blue-text">Ready</span> for High Stakes Tests</h1>
                 <p>The whole point of this program is to ensure that when your students finish, they're <b>ready</b> for their End of Grade test; or they're genuinely ready for new year's content. We're challenging and we're rigorous, but we will get your students where you really want them to be. <br>
                 <br><b>Research Results</b><br>In our first randomized study with a control group, students who played our Fractions game for two hours improved <b>9%</b> more than the control group. <b>16%</b> if you remove outliers and students already scoring above 90%!</p>
               </div>
@@ -185,13 +198,57 @@
               </div>
             </div>
             <div class="col-md-5 col-sm-6 sub-character right-character" data-animation="bounceInRight">
-              <img src="images/character03.png" alt="character">
+              <div class="character">
+                <div class="testimonial-wrapper">
+                  <div class="testimonial">
+                    <p class="quote">"Here's a really cool quote. It was the greatest thing ever!"</p>
+                    <p class="client-name">- Jone Doe</p>
+                  </div>
+                </div>
+                <img src="images/character03.png" alt="character">
+              </div>
             </div>
           </div>
         </section>
       </div>
       <div class="section" id="section4">
         <section class="parts-all mydiv" id="part_four">
+          <a class="brick" href="images/shrine1c.png" data-background="images/shrine1c.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/customcharacter1_new.png" data-background="images/customcharacter1_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/grodpole1_new.png" data-background="images/grodpole1_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/shrine1c2_new.png" data-background="images/shrine1c2_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/story1_new_new.png" data-background="images/story1_new_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/shrine1c.png" data-background="images/shrine1c.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/customcharacter1_new.png" data-background="images/customcharacter1_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/grodpole1_new.png" data-background="images/grodpole1_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/shrine1c2_new.png" data-background="images/shrine1c2_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/story1_new_new.png" data-background="images/story1_new_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/shrine1c.png" data-background="images/shrine1c.png">
+            <p class="brick-title">screenshot</p>
+          </a>
+          <a class="brick" href="images/customcharacter1_new.png" data-background="images/customcharacter1_new.png">
+            <p class="brick-title">screenshot</p>
+          </a>
           <a class="brick" href="images/shrine1c.png" data-background="images/shrine1c.png">
             <p class="brick-title">screenshot</p>
           </a>
@@ -239,7 +296,7 @@
               </div>
               <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12 form-top">
                 <div class="form-wrapper">
-                  <p class="form-title">Request to Pilot</p>
+                  <p class="form-title">Contact Us</p>
                   <div class="message hidden-div">Form Submitted</div>
                   <form id="contact_form" name="myForm" action="/sendinblue_email.php" method="POST">
                     <div class="form-group">
@@ -261,6 +318,24 @@
                     <div class="form-group">
                       <textarea class="form-control form-text-area" name="message" rows="5" id="comment" placeholder="Enter Message"></textarea>
                       <span class="form-error" id="message-error"></span>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-elem check-box check-green">
+                        <div class="elem-wrap">
+                          <input type="checkbox" name="vsubscribe" class="form-control" id="subscribe">
+                          <label for="subscribe"></label>
+                        </div>
+                        <label class="font-color-gray" for="subscribe">Subscribe to occasional email updates</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="form-elem check-box check-green">
+                        <div class="elem-wrap">
+                          <input type="checkbox" name="vcontact_me" class="form-control" id="contact-me">
+                          <label for="contact-me"></label>
+                        </div>
+                        <label class="font-color-gray" for="contact-me">Please contact me about Piloting</label>
+                      </div>
                     </div>
   
                     <div class="captcha_wrapper">
