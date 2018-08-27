@@ -322,7 +322,7 @@
                     <div class="form-group">
                       <div class="form-elem check-box check-green">
                         <div class="elem-wrap">
-                          <input type="checkbox" name="vsubscribe" class="form-control" id="subscribe">
+                          <input type="checkbox" name="vsubscribe" class="form-control" id="subscribe" value="subscribe">
                           <label for="subscribe"></label>
                         </div>
                         <label class="font-color-gray" for="subscribe">Subscribe to occasional email updates</label>
@@ -331,7 +331,7 @@
                     <div class="form-group">
                       <div class="form-elem check-box check-green">
                         <div class="elem-wrap">
-                          <input type="checkbox" name="vcontact_me" class="form-control" id="contact-me">
+                          <input type="checkbox" name="vcontact_me" class="form-control" id="contact-me" value="contact">
                           <label for="contact-me"></label>
                         </div>
                         <label class="font-color-gray" for="contact-me">Please contact me about Piloting</label>

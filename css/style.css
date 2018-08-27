@@ -385,7 +385,12 @@ overflow-y: hidden !important;
   transform: translate(-50%, -50%);
   text-align: center;
 }
-
+#section0 {
+  background-image: url(../images/image13.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 #section5.contact-main {
   background-image: url(../images/cont_bg.png);
   background-size: cover;
@@ -732,6 +737,9 @@ overflow-y: hidden !important;
   }
   #header-main .navbar-nav > li a {
     color: #000;
+  }
+  #section0 {
+    background-image: none;
   }
   #YTPlayer-container {
     top: 66px !important;
