@@ -385,6 +385,9 @@ overflow-y: hidden !important;
   transform: translate(-50%, -50%);
   text-align: center;
 }
+.info-section .sub-character.left-character .character {
+  padding-bottom: 50px;
+}
 #section0 {
   background-image: url(../images/image13.png);
   background-position: center;
