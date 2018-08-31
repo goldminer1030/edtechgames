@@ -21,7 +21,20 @@ var update_fontsize = function () {
       sub_character = $(this).find('.sub-character'),
       testimonial_height = $(this).find('.testimonial-wrapper').outerHeight(true);
 
-    if(window_width < 768) {
+    if(window_width < 480) {
+      // smallest screen
+      if (window_height < 640) {
+        sub_details.css("height", "calc(100vh - " + top_gap + "px)");
+        sub_details_text.css("height", "45vh");
+        sub_details_image.css("height", "calc(50vh - " + top_gap + "px)");
+        sub_character.css("height", "0");
+      } else if(window_height < 800) {
+        sub_details.css("height", "calc(80vh - " + top_gap + "px)");
+        sub_details_text.css("height", "40vh");
+        sub_details_image.css("height", "calc(40vh - " + top_gap + "px)");
+        sub_character.css("height", "20vh");
+      }
+    } else if(window_width < 768) {
       // mobile screen
       // text
       sub_details.css("height", "calc(62vh - " + top_gap + "px)");

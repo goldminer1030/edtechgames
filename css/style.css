@@ -68,6 +68,7 @@ padding: 0 70px;
   font-family: 'Khand', sans-serif;
 }
 #video-sect .content-overhead p {
+  padding: 0 30px;
   font-size: calc(12px + 5 * ((100vw - 320px) / 1280));
   font-family: 'Open Sans', sans-serif;
 }
@@ -321,7 +322,6 @@ overflow-y: hidden !important;
 .info-section .sub-details .sub-detail-text p {
   font-size: calc(14px + 16 * ((100vw - 320px) / 1280));
   text-align: justify;
-  padding-right: 100;
 }
 .info-section .sub-details .sub-detail-screenshots {
   height: calc(25vh - 75px);
@@ -456,7 +456,7 @@ overflow-y: hidden !important;
 }
 .form-wrapper {
   position: absolute;
-  left: 20px;
+  left: 15px;
   top: 48%;
   transform: translateY(-50%);
   width: calc(100% - 100px);
@@ -504,6 +504,13 @@ overflow-y: hidden !important;
   box-shadow: none;
   color: #fff;
   font-size: 14px;
+}
+.form-wrapper .checbox-wrapper {
+  text-align: center;
+  margin-top: 20px;
+}
+.form-wrapper .submit-wrapper {
+  text-align: center;
 }
 
 .captcha_wrapper {
@@ -721,9 +728,74 @@ overflow-y: hidden !important;
   opacity: 1;
 }
 /* meida queries */
+@media screen and (max-width: 479px) and (max-height: 799px) {
+  .info-section .sub-character .character img {
+    display: none;
+  }
+  .form-wrapper {
+    width: calc(100% - 50px);
+    top: 50%;
+  }
+  .form-wrapper .form-title {
+    font-size: 20px;
+  }
+  .form-wrapper .form-control {
+    height: 32px;
+  }
+}
+@media screen and (max-width: 479px) and (max-height: 639px) {
+  .info-section .sub-character {
+    display: none;
+  }
+  .form-wrapper {
+    padding: 5px;
+  }
+  .form-wrapper .checbox-wrapper {
+    margin-top: 5px;
+  }
+  .form-wrapper .form-title {
+    margin-bottom: 5px;
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+  .form-wrapper .form-group {
+    line-height: 1;
+  }
+  .form-wrapper .form-control {
+    height: 20px;
+    padding: 5px 10px;
+    font-size: 10px;
+    line-height: 1;
+  }
+  .form-wrapper .form-group .form-error {
+    font-size: 10px;
+    line-height: 1;
+  }
+  #contact_form input.btn-submit {
+    margin-top: 0;
+    padding: 5px 30px;
+    font-size: 10px;
+  }
+}
 @media screen and (max-width: 767px) {
+  #fp-nav.fp-right {
+    right: 0;
+  }
   .info-section h1 {
     margin: 0;
+  }  
+  .info-section .sub-details {
+    padding: 0 45px 0 30px;
+  }
+  .info-section .sub-details .sub-detail-screenshots {
+    padding: 0 15px;
+  }
+  .info-section .sub-character .testimonial-wrapper .testimonial {
+    padding-right: 65px;
+  }
+  .form-wrapper {
+    position: absolute;
+    width: calc(100% - 45px);
   }
 }
 @media screen and (max-width: 992px) {

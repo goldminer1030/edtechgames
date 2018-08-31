@@ -327,7 +327,7 @@
                       <div class="g-recaptcha" data-sitekey="6LeF-l8UAAAAAL_HXIuqbrUt9YxDO7JZIenChMiE" style="width: 100%!important;"></div>
                     </div>
   
-                    <div class="form-group text-center margin-top-20">
+                    <div class="form-group checbox-wrapper">
                       <div class="form-elem check-box check-green">
                         <div class="elem-wrap">
                           <input type="checkbox" name="vsubscribe" class="form-control" id="subscribe" value="subscribe">
@@ -337,7 +337,7 @@
                       </div>
                     </div>
 
-                    <div class="form-group text-center">
+                    <div class="form-group submit-wrapper">
                       <input type="submit" name="submit" value="Submit" class="btn-submit">
                     </div>
                   </form>
