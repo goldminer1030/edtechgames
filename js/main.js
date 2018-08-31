@@ -28,7 +28,7 @@ var update_fontsize = function () {
         sub_details_text.css("height", "45vh");
         sub_details_image.css("height", "calc(50vh - " + top_gap + "px)");
         sub_character.css("height", "0");
-      } else if(window_height < 800) {
+      } else if(window_height < 813) {
         sub_details.css("height", "calc(80vh - " + top_gap + "px)");
         sub_details_text.css("height", "40vh");
         sub_details_image.css("height", "calc(40vh - " + top_gap + "px)");
@@ -129,7 +129,7 @@ function updateMainBackgroundImage() {
  */
 $(document).ready(function () {
   // Youtube video player
-  $('#background-video').YTPlayer({
+  var heroVideo = $('#background-video').YTPlayer({
     ratio: 16 / 9,
     videoId: 'zC7j2-dkLS4',
     host: 'https://www.youtube.com',

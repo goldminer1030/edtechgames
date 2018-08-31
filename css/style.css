@@ -728,7 +728,7 @@ overflow-y: hidden !important;
   opacity: 1;
 }
 /* meida queries */
-@media screen and (max-width: 479px) and (max-height: 799px) {
+@media screen and (max-width: 479px) and (max-height: 814px) {
   .info-section .sub-character .character img {
     display: none;
   }
