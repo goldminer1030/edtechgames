@@ -1,4 +1,8 @@
-var wall;
+var wall,
+  images = Array("../images/image13.png",
+  "../images/image14.png",
+  "../images/image15.png"),
+  currimg = 0;
 
 /**
  * update_fontsize function
@@ -34,13 +38,14 @@ var update_fontsize = function () {
     // character
     var img_w = parseInt(sub_character.find('img').css('width')),
         img_h = parseInt(sub_character.find('img').css('height')),
+        character_gap = 30,
         container_w = sub_character.width(),
         container_h = sub_character.height(),
-        character_height = sub_character.height() - testimonial_height,
+        character_height = sub_character.height() - testimonial_height - character_gap,
         character_width = img_w * character_height / img_h;
     // if character width is larger than container
     if (character_width > container_w) {
-      character_width = container_w;
+      character_width = container_w - character_gap;
       character_height = img_h * character_width / img_w;
     }
     sub_character.find('img').css('height', character_height + 'px');
@@ -62,6 +67,49 @@ var update_fontsize = function () {
     // console.log("expected Line height: " + expected_lineHeight);
   });
 };
+
+/**
+ * update background image every 3 seconds
+ */
+function updateMainBackgroundImage() {
+  var window_width = $(window).width();
+  if( window_width < 768 ) {
+    // if screen is mobile, loop background image
+    $('#section0').animate({ opacity: 1 }, 500, function () {
+  
+      //finished animating, minifade out and fade new back in           
+      $('#section0').animate({ opacity: 0.7 }, 100, function () {
+  
+        currimg++;
+  
+        if (currimg > images.length - 1) {
+          currimg = 0;
+        }
+  
+        var newimage = images[currimg];
+  
+        //swap out bg src                
+        $('#section0').css("background-image", "url(" + newimage + ")");
+  
+        //animate fully back in
+        $('#section0').animate({ opacity: 1 }, 400, function () {
+  
+          //set timer for next
+          setTimeout(updateMainBackgroundImage, 3000);
+  
+        });
+  
+      });
+  
+    });
+  } else {
+    // if screen is not mobile, cancel background image
+    $('#section0').css("background-image", "none");
+
+    //set timer for next
+    setTimeout(updateMainBackgroundImage, 3000);
+  }
+}
 
 /**
  * document ready
@@ -175,6 +223,9 @@ $(document).ready(function () {
   // update info section font size
   update_fontsize();
 
+  // update main background image
+  setTimeout(updateMainBackgroundImage, 3000);
+
   // free wall
   //calculate rate
   var window_width = $(window).width(), window_height = $(window).height(),
@@ -275,7 +326,6 @@ $(document).ready(function () {
   jQuery("#contact_form").validate({
     rules: {
       vname: "required",
-      vrole: "required",
       vemail: {
         required: true,
         email: true,
@@ -341,6 +391,11 @@ $(document).ready(function () {
  */
 $(window).resize(function () {
   update_fontsize();
+
+  // if desktop screen, cancel background image
+  if (window_width >= 768) {
+    $('#section0').css("background-image", "none");
+  }
 });
 
 /**

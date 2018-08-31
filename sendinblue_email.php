@@ -27,7 +27,7 @@ Successful send message will be returned in this format:
 */
 
 //--> send welcome email
-if(isset($_POST['vcontact_me']) && $_POST['vcontact_me'] == 'contact') {
+if(isset($_POST['vsubscribe']) && $_POST['vsubscribe'] == 'subscribe') {
   $mailin->
   addTo($vemail, 'Ben Harrison')->
   setFrom('contact@edtechgames.com', 'Ben Harrison')->

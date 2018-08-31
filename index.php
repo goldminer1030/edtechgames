@@ -39,10 +39,10 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="https://edtechgames.com/login" target="_blank">Play</a></li>
+              <li><a href="https://login.edtechgames.com" target="_blank">Play</a></li>
               <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Video</a></li>
               <li class="hidden-xs logo"><a href="index.php"><img src="images/logo-edtech.png" alt="Brand"/></a></li>
-              <li><a href="https://edtechgames.com/login" target="_blank">Reports</a></li>
+              <li><a href="https://login.edtechgames.com" target="_blank">Login</a></li>
               <li><a href="#contact">Pilot</a></li>
             </ul>
           </div>
@@ -56,6 +56,9 @@
           <div class="content-overhead">
             <h1 class="wow bounceInUp go">reinventing<br>educational software</h1>
             <p>Where intense engagement unleashes cutting-edge curriculum</p>
+            <a class="lightbox-video" href="https://www.youtube.com/watch?v=go-OKanl3kI" title="Video Play">
+              <i class="fa fa-play-circle-o play-btn"></i>
+            </a>
           </div>
           <div id="moveDown">
             <div class="arrow-cont wow bounceInDown go">
@@ -304,7 +307,7 @@
                       <span class="form-error" id="vname-error"></span>
                     </div>
                     <div class="form-group">
-                      <input type="text" name="vrole" class="form-control" id="user_role" placeholder="Enter Role">
+                      <input type="text" name="vrole" class="form-control" id="user_role" placeholder="Enter Role (Optional)">
                       <span class="form-error" id="vrole-error"></span>
                     </div>
                     <div class="form-group">
@@ -319,7 +322,12 @@
                       <textarea class="form-control form-text-area" name="message" rows="5" id="comment" placeholder="Enter Message"></textarea>
                       <span class="form-error" id="message-error"></span>
                     </div>
-                    <div class="form-group">
+  
+                    <div class="captcha_wrapper">
+                      <div class="g-recaptcha" data-sitekey="6LeF-l8UAAAAAL_HXIuqbrUt9YxDO7JZIenChMiE" style="width: 100%!important;"></div>
+                    </div>
+  
+                    <div class="form-group text-center margin-top-20">
                       <div class="form-elem check-box check-green">
                         <div class="elem-wrap">
                           <input type="checkbox" name="vsubscribe" class="form-control" id="subscribe" value="subscribe">
@@ -328,21 +336,8 @@
                         <label class="font-color-gray" for="subscribe">Subscribe to occasional email updates</label>
                       </div>
                     </div>
-                    <div class="form-group">
-                      <div class="form-elem check-box check-green">
-                        <div class="elem-wrap">
-                          <input type="checkbox" name="vcontact_me" class="form-control" id="contact-me" value="contact">
-                          <label for="contact-me"></label>
-                        </div>
-                        <label class="font-color-gray" for="contact-me">Please contact me about Piloting</label>
-                      </div>
-                    </div>
-  
-                    <div class="captcha_wrapper">
-                      <div class="g-recaptcha" data-sitekey="6LeF-l8UAAAAAL_HXIuqbrUt9YxDO7JZIenChMiE" style="width: 100%!important;"></div>
-                    </div>
-  
-                    <div class="form-group">
+
+                    <div class="form-group text-center">
                       <input type="submit" name="submit" value="Submit" class="btn-submit">
                     </div>
                   </form>
