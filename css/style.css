@@ -682,6 +682,7 @@ overflow-y: hidden !important;
 }
 
 .brick {
+  display: inline-block;
   position: relative;
   background-position: center center;
   background-repeat: no-repeat;
@@ -726,6 +727,15 @@ overflow-y: hidden !important;
 }
 .brick:hover .brick-title {
   opacity: 1;
+}
+.brick,
+.grid-sizer {
+  width: 20%;
+}
+.brick--width2 { width: 40%; }
+.brick img {
+  max-width: 100%;
+  max-height: 100%;
 }
 /* meida queries */
 @media screen and (max-width: 479px) and (max-height: 814px) {

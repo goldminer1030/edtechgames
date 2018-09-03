@@ -185,7 +185,7 @@ $(document).ready(function () {
   });
 
   // fluid box
-  $('.sub-detail-screenshots .screenshot').fluidbox();
+  $('a[data-fluidbox]').fluidbox();
   // fluid box key down
   document.onkeydown = function (evt) {
     evt = evt || window.event;
@@ -246,76 +246,82 @@ $(document).ready(function () {
     brick_unit_w = parseInt(window_width / 12),
     rate = brick_max_w / brick_max_h;
   
-  $('#part_four .brick').each(function (e) {
-    var h = 1 + 10 * Math.random() << 0,
-        w = h * rate;
-    var imageUrl = $(this).data('background');
-    var r_w = w * brick_unit_w, r_h = h * brick_unit_w;
+  // $('#part_four .brick').each(function (e) {
+  //   var h = 1 + 10 * Math.random() << 0,
+  //       w = h * rate;
+  //   var imageUrl = $(this).data('background');
+  //   var r_w = w * brick_unit_w, r_h = h * brick_unit_w;
 
-    $(this).css({
-      'width': r_w + 'px',
-      'height': r_h + 'px',
-      'background-image': 'url(../' + imageUrl + ')'
-    });
+  //   $(this).css({
+  //     'width': r_w + 'px',
+  //     'height': r_h + 'px',
+  //     'background-image': 'url(../' + imageUrl + ')'
+  //   });
 
-    $(this).magnificPopup({
-      type: 'image',
-      removalDelay: 500,
-      callbacks: {
-        beforeOpen: function () {
-          this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-          this.st.mainClass = 'mfp-zoom-in';
-        }
-      },
-      closeOnContentClick: true
-    });
+  //   $(this).magnificPopup({
+  //     type: 'image',
+  //     removalDelay: 500,
+  //     callbacks: {
+  //       beforeOpen: function () {
+  //         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+  //         this.st.mainClass = 'mfp-zoom-in';
+  //       }
+  //     },
+  //     closeOnContentClick: true
+  //   });
+  // });
+
+  // wall = new Freewall("#part_four");
+  // var fix_step = 1, header_lg = 81, header_sm = 50, wall_gap = 15, cell_w = 200;
+  // wall.reset({
+  //   selector: '.brick',
+  //   animate: true,
+  //   cellW: function (width) {
+  //     var cellWidth = width / 3;
+  //     return cellWidth - 20;
+  //   },
+  //   cellH: function (height) {
+  //     var cellHeight = height / 4;
+  //     return cellHeight - 20;
+  //   },
+  //   delay: 30,
+  //   onResize: function () {
+  //     var window_width = $(window).width(), window_height = $(window).height(),
+  //       header_h = window_height >= 768 ? header_lg : header_sm;
+
+  //     wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
+  //   },
+  //   onComplete: function() {
+  //     if(fix_step > 0) {
+  //       /**
+  //        * to fix the masonry gap issue when scroll up and down
+  //        */
+  //       var window_width = $(window).width(), window_height = $(window).height(),
+  //         header_h = window_height >= 768 ? header_lg : header_sm;
+  //       switch(fix_step) {
+  //         case 1:
+  //           wall.refresh(600, window_height - header_h - wall_gap);
+  //           fix_step = 2;
+  //         break;
+  //         case 2:
+  //           wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
+  //           fix_step = 0;
+  //         break;
+  //       }
+  //     }
+  //   }
+  // });
+  // // caculator width and height for IE7;
+  // var window_width = $(window).width(), window_height = $(window).height(),
+  //   header_h = window_height >= 768 ? header_lg : header_sm;
+
+  // wall.fitZone(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
+
+  $('#part_four').masonry({
+    itemSelector: '.brick',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
   });
-
-  wall = new Freewall("#part_four");
-  var fix_step = 1, header_lg = 81, header_sm = 50, wall_gap = 15, cell_w = 200;
-  wall.reset({
-    selector: '.brick',
-    animate: true,
-    cellW: function (width) {
-      var cellWidth = width / 3;
-      return cellWidth - 20;
-    },
-    cellH: function (height) {
-      var cellHeight = height / 4;
-      return cellHeight - 20;
-    },
-    delay: 30,
-    onResize: function () {
-      var window_width = $(window).width(), window_height = $(window).height(),
-        header_h = window_height >= 768 ? header_lg : header_sm;
-
-      wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
-    },
-    onComplete: function() {
-      if(fix_step > 0) {
-        /**
-         * to fix the masonry gap issue when scroll up and down
-         */
-        var window_width = $(window).width(), window_height = $(window).height(),
-          header_h = window_height >= 768 ? header_lg : header_sm;
-        switch(fix_step) {
-          case 1:
-            wall.refresh(600, window_height - header_h - wall_gap);
-            fix_step = 2;
-          break;
-          case 2:
-            wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
-            fix_step = 0;
-          break;
-        }
-      }
-    }
-  });
-  // caculator width and height for IE7;
-  var window_width = $(window).width(), window_height = $(window).height(),
-    header_h = window_height >= 768 ? header_lg : header_sm;
-
-  wall.fitZone(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
 
   // form validate
   jQuery.validator.addMethod("validEmail", function (value, element) {
@@ -406,7 +412,7 @@ $(window).resize(function () {
   update_fontsize();
 
   // if desktop screen, cancel background image
-  if (window_width >= 768) {
+  if ($(window).width() >= 768) {
     $('#section0').css("background-image", "none");
   }
 });
