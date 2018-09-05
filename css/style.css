@@ -691,45 +691,7 @@ overflow-y: hidden !important;
   background-repeat: no-repeat;
   background-size: cover;
   background-color: #222;
-}
-.brick:after {
-  content: '\A';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  background: rgba(0,0,0,0.6);
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-.brick:hover:after {
-  opacity:1;
-}
-.brick .brick-title {
-  position: absolute;
-  display: block;
-  text-align: left;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 20px;
-  bottom: 12%;
-  left: 0;
-  right: 0;
-  z-index: 50;
-  pointer-events: all;
-  padding: 15px 15px;
-  margin-right: 10px;
-  max-width: 160px;
-  background-color: #fff;
-  color: #000;
-  opacity: 0;
-  transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-}
-.brick:hover .brick-title {
-  opacity: 1;
+  z-index: 1;
 }
 .grid-sizer {
   width: 20%;
@@ -742,7 +704,7 @@ overflow-y: hidden !important;
   display: inline-block;
   position: relative;
 }
-.grid-item::before {
+.grid-item::after {
   position: absolute;
   top: 0;
   left: 0;
@@ -752,17 +714,10 @@ overflow-y: hidden !important;
   content: "";
   background-color: rgba(0,0,0,0.7);
   transition: all 0.8s ease 0s;
-  z-index: 1;
 }
-.grid-item:hover:before {
+.grid-item:hover:after {
   background-color: rgba(0,0,0,0);
 }
-/* .grid-item .fluidbox--closed {
-  opacity: 0.1;
-}
-.grid-item .fluidbox--opened {
-  opacity: 1;
-} */
 
 /* meida queries */
 @media screen and (max-width: 479px) and (max-height: 814px) {
