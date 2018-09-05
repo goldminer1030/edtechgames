@@ -788,6 +788,9 @@ overflow-y: hidden !important;
   }
 }
 @media screen and (max-width: 767px) {
+  .hidden_on_mobile {
+    display: none !important;
+  }
   #fp-nav.fp-right {
     right: 0;
   }

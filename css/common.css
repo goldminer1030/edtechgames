@@ -60,6 +60,7 @@
     #header-main .navbar-header a {
         position: absolute;
         padding: 0px;
+        z-index: 999999;
     }
 
     #header-main .navbar-header img {

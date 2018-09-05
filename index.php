@@ -39,11 +39,9 @@
           </div>
           <div class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-              <li><a href="https://login.edtechgames.com" target="_blank">Play</a></li>
-              <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Video</a></li>
+              <li><a href="https://login.edtechgames.com" target="_blank">Get Started</a></li>
               <li class="hidden-xs logo"><a href="index.php"><img src="images/logo-edtech.png" alt="Brand"/></a></li>
-              <li><a href="https://login.edtechgames.com" target="_blank">Login</a></li>
-              <li><a href="#contact">Pilot</a></li>
+              <li class="hidden_on_mobile"><a class="lightbox-video" href="https://www.youtube.com/watch?v=zC7j2-dkLS4" title="Video Play">Watch Video</a></li>
             </ul>
           </div>
         </div>

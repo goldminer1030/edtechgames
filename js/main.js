@@ -1,7 +1,7 @@
 var wall,
   images = Array("../images/image13.png",
-  "../images/image14.png",
-  "../images/image15.png"),
+    "../images/image14.png",
+    "../images/image15.png"),
   currimg = 0;
 
 /**
@@ -21,20 +21,20 @@ var update_fontsize = function () {
       sub_character = $(this).find('.sub-character'),
       testimonial_height = $(this).find('.testimonial-wrapper').outerHeight(true);
 
-    if(window_width < 480) {
+    if (window_width < 480) {
       // smallest screen
       if (window_height < 640) {
         sub_details.css("height", "calc(100vh - " + top_gap + "px)");
         sub_details_text.css("height", "45vh");
         sub_details_image.css("height", "calc(50vh - " + top_gap + "px)");
         sub_character.css("height", "0");
-      } else if(window_height < 813) {
+      } else if (window_height < 813) {
         sub_details.css("height", "calc(80vh - " + top_gap + "px)");
         sub_details_text.css("height", "40vh");
         sub_details_image.css("height", "calc(40vh - " + top_gap + "px)");
         sub_character.css("height", "20vh");
       }
-    } else if(window_width < 768) {
+    } else if (window_width < 768) {
       // mobile screen
       // text
       sub_details.css("height", "calc(62vh - " + top_gap + "px)");
@@ -50,12 +50,12 @@ var update_fontsize = function () {
     }
     // character
     var img_w = parseInt(sub_character.find('img').css('width')),
-        img_h = parseInt(sub_character.find('img').css('height')),
-        character_gap = 30,
-        container_w = sub_character.width(),
-        container_h = sub_character.height(),
-        character_height = sub_character.height() - testimonial_height - character_gap,
-        character_width = img_w * character_height / img_h;
+      img_h = parseInt(sub_character.find('img').css('height')),
+      character_gap = 30,
+      container_w = sub_character.width(),
+      container_h = sub_character.height(),
+      character_height = sub_character.height() - testimonial_height - character_gap,
+      character_width = img_w * character_height / img_h;
     // if character width is larger than container
     if (character_width > container_w) {
       character_width = container_w - character_gap;
@@ -86,34 +86,34 @@ var update_fontsize = function () {
  */
 function updateMainBackgroundImage() {
   var window_width = $(window).width();
-  if( window_width < 768 ) {
+  if (window_width < 768) {
     // if screen is mobile, loop background image
     $('#section0').animate({ opacity: 1 }, 500, function () {
-  
+
       //finished animating, minifade out and fade new back in           
       $('#section0').animate({ opacity: 0.7 }, 100, function () {
-  
+
         currimg++;
-  
+
         if (currimg > images.length - 1) {
           currimg = 0;
         }
-  
+
         var newimage = images[currimg];
-  
+
         //swap out bg src                
         $('#section0').css("background-image", "url(" + newimage + ")");
-  
+
         //animate fully back in
         $('#section0').animate({ opacity: 1 }, 400, function () {
-  
+
           //set timer for next
           setTimeout(updateMainBackgroundImage, 3000);
-  
+
         });
-  
+
       });
-  
+
     });
   } else {
     // if screen is not mobile, cancel background image
@@ -245,7 +245,7 @@ $(document).ready(function () {
     brick_max_w = window_width / 3, brick_max_h = window_height / 4,
     brick_unit_w = parseInt(window_width / 12),
     rate = brick_max_w / brick_max_h;
-  
+
   // $('#part_four .brick').each(function (e) {
   //   var h = 1 + 10 * Math.random() << 0,
   //       w = h * rate;
