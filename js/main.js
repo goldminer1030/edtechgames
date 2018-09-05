@@ -2,7 +2,280 @@ var wall,
   images = Array("../images/image13.png",
     "../images/image14.png",
     "../images/image15.png"),
-  currimg = 0;
+  currimg = 0, max_grid_items = 11,
+  SCREEN_ORIENTATION_INIT = -1,
+  SCREEN_ORIENTATION_PORTRAIT = 0,
+  SCREEN_ORIENTATION_SQUARE = 1,
+  SCREEN_ORIENTATION_LANDSCAPE = 2,
+  current_screen_orientation = SCREEN_ORIENTATION_INIT,
+  GRID_MAP = [
+    // 1
+    [
+      // portrait
+      [
+        [100, 100]
+      ],
+      // square
+      [
+        [100, 100]
+      ],
+      // landscape
+      [
+        [100, 100]
+      ]
+    ],
+    // 2
+    [
+      // portrait
+      [
+        [100, 50], [100, 50]
+      ],
+      // square
+      [
+        [50, 50], [50, 50]
+      ],
+      // landscape
+      [
+        [50, 50], [50, 50]
+      ]
+    ],
+    // 3
+    [
+      // portrait
+      [
+        [100, 33.33], [50, 66.66], [50, 66.66]
+      ],
+      // square
+      [
+        [50, 100], [50, 50], [50, 50]
+      ],
+      // landscape
+      [
+        [33.33, 100], [66.66, 50], [66.66, 50]
+      ],
+    ],
+    // 4
+    [
+      // portrait
+      [
+        [100, 25], [50, 50], [50, 50], [100, 25]
+      ],
+      // square
+      [
+        [50, 66.66], [50, 33.33], [50, 33.33], [100, 33.33]
+      ],
+      // landscape
+      [
+        [66.66, 50], [33.33, 100], [33.33, 50], [33.33, 50]
+      ],
+    ],
+    // 5
+    [
+      // portrait
+      [
+        [50, 50], [50, 25], [50, 50], [50, 25], [100, 25]
+      ],
+      // square
+      [
+        [33.33, 66.66], [66.66, 33.33], [33.33, 33.33], [33.33, 33.33], [100, 33.33]
+      ],
+      // landscape
+      [
+        [25, 100], [50, 50], [25, 100], [25, 50], [25, 50]
+      ],
+    ],
+    // 6
+    [
+      // portrait
+      [
+        [66.66, 33.33], [33.33, 66.66], [33.33, 33.33], [33.33, 33.33], [66.66, 33.33], [33.33, 33.33]
+      ],
+      // square
+      [
+        [33.33, 33.33], [66.66, 33.33], [66.66, 33.33], [33.33, 66.66], [33.33, 33.33], [33.33, 33.33]
+      ],
+      // landscape
+      [
+        [25, 50], [25, 100], [25, 50], [25, 100], [25, 50], [25, 50]
+      ],
+    ],
+    // 7
+    [
+      // portrait
+      [
+        [100, 20], [50, 20], [50, 20], [50, 40], [50, 20], [50, 20], [100, 20]
+      ],
+      // square
+      [
+        [33.33, 66.66], [33.33, 33.33], [33.33, 33.33], [33.33, 66.66], [33.33, 33.33], [33.33, 33.33], [33.33, 33.33]
+      ],
+      // landscape
+      [
+        [25, 66.66], [50, 33.33], [25, 66.66], [25, 66.66], [25, 33.33], [25, 33.33], [50, 33.33]
+      ],
+    ],
+    // 8
+    [
+      // portrait
+      [
+        [50, 25], [50, 25], [50, 25], [50, 25], [50, 25], [50, 25], [50, 25], [50, 25]
+      ],
+      // square
+      [
+        [25, 66.66], [25, 33.33], [25, 66.66], [25, 33.33], [25, 66.66], [25, 66.66], [25, 33.33], [25, 33.33]
+      ],
+      // landscape
+      [
+        [25, 66.66], [25, 33.33], [25, 66.66], [25, 33.33], [25, 66.66], [25, 66.66], [25, 33.33], [25, 33.33]
+      ],
+    ],
+    // 9
+    [
+      // portrait
+      [
+        [66.66, 20], [33.33, 40], [33.33, 20], [33.33, 20], [33.33, 40], [66.66, 20], [33.33, 20], [33.33, 20], [100, 20]
+      ],
+      // square
+      [
+        [33.33, 50], [66.66, 25], [33.33, 25], [33.33, 25], [33.33, 25], [66.66, 25], [33.33, 25], [33.33, 25], [33.33, 25]
+      ],
+      // landscape
+      [
+        [20, 66.66], [40, 33.33], [20, 66.66], [20, 66.66], [20, 33.33], [20, 33.33], [40, 33.33], [20, 33.33], [40, 33.33]
+      ],
+    ],
+    // 10
+    [
+      // portrait
+      [
+        [33.33, 40], [33.33, 20], [33.33, 40], [33.33, 20], [66.66, 20], [33.33, 20], [33.33, 20], [66.66, 20], [66.66, 20], [33.33, 20]
+      ],
+      // square
+      [
+        [50, 25], [25, 50], [25, 50], [25, 50], [25, 25], [25, 25], [25, 25], [25, 50], [50, 25], [25, 25]
+      ],
+      // landscape
+      [
+        [50, 25], [25, 25], [25, 50], [25, 25], [50, 25], [50, 25], [25, 50], [25, 25], [50, 25], [25, 25]
+      ],
+    ],
+    // 11
+    [
+      // portrait
+      [
+        [33.33, 20], [33.33, 20], [33.33, 40], [33.33, 40], [33.33, 20], [33.33, 20], [33.33, 20], [66.66, 20], [33.33, 40], [33.33, 20], [33.33, 20]
+      ],
+      // square
+      [
+        [50, 25], [25, 50], [25, 25], [25, 25], [25, 25], [25, 25], [25, 50], [50, 25], [25, 50], [25, 25], [25, 25]
+      ],
+      // landscape
+      [
+        [40, 33.33], [20, 66.66], [40, 33.33], [20, 33.33], [20, 33.33], [20, 33.33], [20, 33.33], [40, 33.33], [20, 33.33], [20, 33.33], [20, 33.33]
+      ],
+    ],
+  ],
+  GRID_COL_WIDTH = [
+    // 1
+    [
+      // portrait
+      100,
+      // square
+      100,
+      // landscape
+      100,
+    ],
+    // 2
+    [
+      // portrait
+      100,
+      // square
+      50,
+      // landscape
+      50,
+    ],
+    // 3
+    [
+      // portrait
+      50,
+      // square
+      50,
+      // landscape
+      33.33,
+    ],
+    // 4
+    [
+      // portrait
+      50,
+      // square
+      50,
+      // landscape
+      33.33,
+    ],
+    // 5
+    [
+      // portrait
+      50,
+      // square
+      33.33,
+      // landscape
+      25,
+    ],
+    // 6
+    [
+      // portrait
+      33.33,
+      // square
+      33.33,
+      // landscape
+      25,
+    ],
+    // 7
+    [
+      // portrait
+      50,
+      // square
+      33.33,
+      // landscape
+      25,
+    ],
+    // 8
+    [
+      // portrait
+      50,
+      // square
+      25,
+      // landscape
+      25,
+    ],
+    // 9
+    [
+      // portrait
+      33.33,
+      // square
+      33.33,
+      // landscape
+      20,
+    ],
+    // 10
+    [
+      // portrait
+      33.33,
+      // square
+      25,
+      // landscape
+      25,
+    ],
+    // 11
+    [
+      // portrait
+      33.33,
+      // square
+      25,
+      // landscape
+      20,
+    ],
+  ];
 
 /**
  * update_fontsize function
@@ -125,6 +398,81 @@ function updateMainBackgroundImage() {
 }
 
 /**
+ * check if screen orientation is changed
+ */
+function isOrientationChanged() {
+  var window_width = $(window).width(), window_height = $(window).height(),
+    window_rate = window_width / window_height, window_orientation = SCREEN_ORIENTATION_SQUARE, is_changed = false;
+  if (window_rate < 0.7) {
+    // portrait
+    window_orientation = SCREEN_ORIENTATION_PORTRAIT;
+  } else if (window_rate > 1.4) {
+    // landscape
+    window_orientation = SCREEN_ORIENTATION_LANDSCAPE
+  }
+
+  if (current_screen_orientation != window_orientation) {
+    is_changed = true;
+  }
+  // change the current orientation status
+  current_screen_orientation = window_orientation;
+
+  return is_changed;
+}
+
+function updateMasonryGrid() {
+  // arrange grid item
+  var grid_items = $('#part_four .grid-item').length, map = getGridMap(grid_items), map_len = map.length, grid_index = 0;
+  $('#part_four .grid-item').each(function (e) {
+    var grid_item = $(this), imageUrl = grid_item.find('img').attr('src');
+    if (grid_index < map_len) {
+      var w = map[grid_index][0], h = map[grid_index][1];
+      grid_item.css({
+        'width': w + '%',
+        'height': h + '%',
+        'background-image': 'url(../' + imageUrl + ')',
+        'background-position': 'center',
+        'cursor': 'pointer',
+        'background-size': 'cover'
+      });
+    } else {
+      console.log('out of index error');
+    }
+    grid_index++;
+  });
+
+  // adjust grid column width
+  $('#part_four .grid-sizer').css('width', getGridColumnWidth(grid_items) + '%');
+
+  $('#part_four').masonry({
+    itemSelector: '.grid-item',
+    columnWidth: '.grid-sizer',
+    percentPosition: true
+  });
+}
+/**
+ * 
+ * @param {*} items 
+ */
+function getGridMap(items) {
+  if (items > max_grid_items) {
+    items = max_grid_items;
+  }
+  
+  return GRID_MAP[items - 1][current_screen_orientation];
+}
+/**
+ * 
+ * @param {*} items 
+ */
+function getGridColumnWidth(items) {
+  if (items > max_grid_items) {
+    items = max_grid_items;
+  }
+  
+  return GRID_COL_WIDTH[items - 1][current_screen_orientation];
+}
+/**
  * document ready
  */
 $(document).ready(function () {
@@ -185,7 +533,15 @@ $(document).ready(function () {
   });
 
   // fluid box
-  $('a[data-fluidbox]').fluidbox();
+  $('a[data-fluidbox]').on('openstart.fluidbox', function (e) {
+    if ($(this).parents('.grid-item').length) {
+      $(this).css('opacity', '1');
+    }
+  }).on('closeend.fluidbox', function (e) {
+    if ($(this).parents('.grid-item').length) {
+      $(this).css('opacity', '0');
+    }
+  }).fluidbox();
   // fluid box key down
   document.onkeydown = function (evt) {
     evt = evt || window.event;
@@ -239,89 +595,10 @@ $(document).ready(function () {
   // update main background image
   setTimeout(updateMainBackgroundImage, 3000);
 
-  // free wall
-  //calculate rate
-  var window_width = $(window).width(), window_height = $(window).height(),
-    brick_max_w = window_width / 3, brick_max_h = window_height / 4,
-    brick_unit_w = parseInt(window_width / 12),
-    rate = brick_max_w / brick_max_h;
-
-  // $('#part_four .brick').each(function (e) {
-  //   var h = 1 + 10 * Math.random() << 0,
-  //       w = h * rate;
-  //   var imageUrl = $(this).data('background');
-  //   var r_w = w * brick_unit_w, r_h = h * brick_unit_w;
-
-  //   $(this).css({
-  //     'width': r_w + 'px',
-  //     'height': r_h + 'px',
-  //     'background-image': 'url(../' + imageUrl + ')'
-  //   });
-
-  //   $(this).magnificPopup({
-  //     type: 'image',
-  //     removalDelay: 500,
-  //     callbacks: {
-  //       beforeOpen: function () {
-  //         this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-  //         this.st.mainClass = 'mfp-zoom-in';
-  //       }
-  //     },
-  //     closeOnContentClick: true
-  //   });
-  // });
-
-  // wall = new Freewall("#part_four");
-  // var fix_step = 1, header_lg = 81, header_sm = 50, wall_gap = 15, cell_w = 200;
-  // wall.reset({
-  //   selector: '.brick',
-  //   animate: true,
-  //   cellW: function (width) {
-  //     var cellWidth = width / 3;
-  //     return cellWidth - 20;
-  //   },
-  //   cellH: function (height) {
-  //     var cellHeight = height / 4;
-  //     return cellHeight - 20;
-  //   },
-  //   delay: 30,
-  //   onResize: function () {
-  //     var window_width = $(window).width(), window_height = $(window).height(),
-  //       header_h = window_height >= 768 ? header_lg : header_sm;
-
-  //     wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
-  //   },
-  //   onComplete: function() {
-  //     if(fix_step > 0) {
-  //       /**
-  //        * to fix the masonry gap issue when scroll up and down
-  //        */
-  //       var window_width = $(window).width(), window_height = $(window).height(),
-  //         header_h = window_height >= 768 ? header_lg : header_sm;
-  //       switch(fix_step) {
-  //         case 1:
-  //           wall.refresh(600, window_height - header_h - wall_gap);
-  //           fix_step = 2;
-  //         break;
-  //         case 2:
-  //           wall.refresh(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
-  //           fix_step = 0;
-  //         break;
-  //       }
-  //     }
-  //   }
-  // });
-  // // caculator width and height for IE7;
-  // var window_width = $(window).width(), window_height = $(window).height(),
-  //   header_h = window_height >= 768 ? header_lg : header_sm;
-
-  // wall.fitZone(window_width - (wall_gap * 2), window_height - header_h - wall_gap);
-
-  $('#part_four').masonry({
-    itemSelector: '.brick',
-    columnWidth: '.grid-sizer',
-    percentPosition: true
-  });
+  // masonry grid
+  if (isOrientationChanged()) {
+    updateMasonryGrid();
+  }
 
   // form validate
   jQuery.validator.addMethod("validEmail", function (value, element) {
@@ -414,6 +691,11 @@ $(window).resize(function () {
   // if desktop screen, cancel background image
   if ($(window).width() >= 768) {
     $('#section0').css("background-image", "none");
+  }
+
+  // if orientation is changed, update masonry grid
+  if(isOrientationChanged()) {
+    updateMasonryGrid();
   }
 });
 
