@@ -1,7 +1,6 @@
 #part_one,
 #part_two,
 #part_three {
-    padding: 75px 0;
     position: relative;
     z-index: 10;
     background-size: cover;
@@ -10,6 +9,7 @@
 .parts-all {
     display: inline-block;
     width: 100%;
+    height: 100vh;
     float: left;
     background-color: #000;
 }
@@ -23,6 +23,11 @@
 #part_four {
     margin-top: 51px;
     padding-top: 1px;
+}
+#part_five {
+    z-index: 3;
+    position: relative;
+    height: calc(100vh - 51px);
 }
 .blue-text {
     color: #00b1db;
@@ -194,7 +199,7 @@ and (orientation : landscape) {
     margin-bottom: 15px;
 }
 #part_one, #part_two, #part_three {
-    height: 100vh;
+    height: calc(100vh - 51px);
 }
 div#section2 {
     background-color: #fff;
@@ -390,8 +395,16 @@ section#part_one .demo center {
 }
 
 @media screen and (min-width: 768px) {
+    #part_one,
+    #part_two,
+    #part_three {
+        height: calc(100vh - 66px);
+    }
     #part_four {
         margin-top: 66px;
+    }
+    #part_five {
+        height: calc(100vh - 66px);
     }
 	.intro-1 p, .intro-2 p, .intro-3 p {
         font-size: 1.5vw;

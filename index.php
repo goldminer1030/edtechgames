@@ -214,61 +214,74 @@
       </div>
       <div class="section" id="section4">
         <section class="parts-all mydiv" id="part_four">
-          <div class="grid-sizer"></div>
-          <div class="grid-item">
-            <a class="brick" href="images/shrine1c.png" data-fluidbox="true">
-              <img src="images/shrine1c.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/customcharacter1_new.png" data-fluidbox="true">
-              <img src="images/customcharacter1_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/grodpole1_new.png" data-fluidbox="true">
-              <img src="images/grodpole1_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/shrine1c2_new.png" data-fluidbox="true">
-              <img src="images/shrine1c2_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/story1_new_new.png" data-fluidbox="true">
-              <img src="images/story1_new_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/shrine1c.png" data-fluidbox="true">
-              <img src="images/shrine1c.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/customcharacter1_new.png" data-fluidbox="true">
-              <img src="images/customcharacter1_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/grodpole1_new.png" data-fluidbox="true">
-              <img src="images/grodpole1_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/shrine1c2_new.png" data-fluidbox="true">
-              <img src="images/shrine1c2_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/story1_new_new.png" data-fluidbox="true">
-              <img src="images/story1_new_new.png" alt="screenshot">
-            </a>
-          </div>
-          <div class="grid-item">
-            <a class="brick" href="images/shrine1c.png" data-fluidbox="true">
-              <img src="images/shrine1c.png" alt="screenshot">
-            </a>
+          <div class="grid-container">
+            <div class="grid-sizer"></div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/shrine1c.png" data-fluidbox="true">
+                <img src="images/shrine1c.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/customcharacter1_new.png" data-fluidbox="true">
+                <img src="images/customcharacter1_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/grodpole1_new.png" data-fluidbox="true">
+                <img src="images/grodpole1_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/shrine1c2_new.png" data-fluidbox="true">
+                <img src="images/shrine1c2_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/story1_new_new.png" data-fluidbox="true">
+                <img src="images/story1_new_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/shrine1c.png" data-fluidbox="true">
+                <img src="images/shrine1c.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/customcharacter1_new.png" data-fluidbox="true">
+                <img src="images/customcharacter1_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/grodpole1_new.png" data-fluidbox="true">
+                <img src="images/grodpole1_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/shrine1c2_new.png" data-fluidbox="true">
+                <img src="images/shrine1c2_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/story1_new_new.png" data-fluidbox="true">
+                <img src="images/story1_new_new.png" alt="screenshot">
+              </a>
+            </div>
+            <div class="grid-item">
+              <p class="brick-title">screenshot</p>
+              <a class="brick" href="images/shrine1c.png" data-fluidbox="true">
+                <img src="images/shrine1c.png" alt="screenshot">
+              </a>
+            </div>
           </div>
         </section>
       </div>
