@@ -289,6 +289,10 @@ overflow-y: hidden !important;
   background: url('../images/99.png');
 }
 
+.reference{
+  	text-align: right;
+}
+
 /* info section */
 .info-section .sub-details {
   padding: 0 30px 0 30px;

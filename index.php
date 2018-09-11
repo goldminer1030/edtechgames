@@ -84,12 +84,14 @@
       </div>
       <div class="section info-section" id="section1">
         <section class="parts-all parallax mydiv" id="part_one">
-          <h1><span class="blue-text">Intense</span> Engagement Enables <span class="blue-text">Intense</span> Learning</h1>
+          <h1><span class="blue-text">Powerful</span> Curriculum for a <span class="blue-text">Critical</span> Problem</h1>
           <div class="row">
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text">
-                <p>Any program can keep a student amused and interactive. That's just not enough. Our high-end gameplay provides an extra level of engagement that enables them to work <b>intensely</b> on our very rigorous, powerful curriculum.<br><br> 
-                But you'll have to see it for yourself to believe it. So grab a student and watch how they learn in our program.</p>
+                <p>It is clear from the research that students are failing at fractions, creating "<i>a major obstacle to further progress in mathematics</i>."</p>
+                <p>Our powerful curriculum corrects this "<i>critical, foundational</i>" problem by pinpointing the specific deficits of each student then filling in all the little gaps with our unique, granular curriculum.</p>
+                <p>Then we provide sufficient practice to develop genuine fluency as we carefully nurture them along from conceptual understanding to operational procedures to rigorous problem solving.</p>
+                <div class="reference"> -National Mathematics Advisory Panel Final Report 2008</div>
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
@@ -110,8 +112,8 @@
               <div class="character">
                 <div class="testimonial-wrapper">
                   <div class="testimonial">
-                    <p class="quote">"Here's a really cool quote. It was the greatest thing ever!"</p>
-                    <p class="client-name">- Jone Doe</p>
+                    <p class="quote">"27% of eighth-graders could not correctly shade 1/3 of a rectangle."</p>
+                    <p class="client-name">- U.S. Department of Education, 2004).</p>
                   </div>
                 </div>
                 <img src="images/Rocko.png" alt="character">
@@ -122,12 +124,12 @@
       </div>
       <div class="section info-section" id="section2">
         <section class="parts-all mydiv" id="part_two">
-          <h1><span class="blue-text">Unique</span> Learning-Centric Curriculum</h1>
+          <h1><span class="blue-text">Intense</span> Engagement Enables <span class="blue-text">Intense</span> Learning</h1>
           <div class="row">
             <div class="col-md-7 col-md-push-5 col-sm-6 col-sm-push-6 sub-details left-side">
               <div class="sub-detail-text">
-                <p>Our hands-on curriculum enables a student to incrementally <b>experience</b> mathematic concepts for themselves. They incrementally and efficiently <b>build</b> each piece of understanding so they know <b>why</b>the math works. Then they fluidly progress to purely mathematical manipulations and then diverse problem solving applications.<br><br>
-                We support 25 languages (both text and audio) and offer insightful reporting, placement assessments and adaptive content.</p>
+                <p>Any program can keep a student amused and interactive. That's just not enough. Our high-end gameplay provides an extra level of engagement that enables them to work <b>intensely</b> on our very rigorous, powerful curriculum.</p>
+                <p>But you'll have to see it for yourself to believe it. So grab a student and watch how they learn in our program.</p>
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">

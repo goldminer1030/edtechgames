@@ -29,6 +29,9 @@
     position: relative;
     height: calc(100vh - 51px);
 }
+.reference {
+    font-size:12px;
+}
 .blue-text {
     color: #00b1db;
 }
