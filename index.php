@@ -397,20 +397,26 @@
         </div>
       </div>
     </section>
-
     <script type="text/javascript" src="vendor/jquery.min.js"></script>
-    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="vendor/jquery-throttle-debounce/jquery.ba-throttle-debounce.min.js"></script>
-    <script type="text/javascript" src="vendor/fluidbox/fluidbox.js"></script>
-    <script type="text/javascript" src="vendor/jQuery.YoutubeBackground/jquery.youtubebackground.js"></script>
-    <script type="text/javascript" src="vendor/jquery.validate.js"></script>
-    <script type="text/javascript" src="https://use.fontawesome.com/bc8520503f.js"></script>
-    <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" async="async" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+    /*
+    * jQuery throttle / debounce - v1.1 - 3/7/2010
+    * http://benalman.com/projects/jquery-throttle-debounce-plugin/
+    * Copyright (c) 2010 "Cowboy" Ben Alman
+    * Dual licensed under the MIT and GPL licenses.
+    * http://benalman.com/about/license/
+    * */
+   (function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);</script>
+    <script type="text/javascript" async="async" src="vendor/jQuery.YoutubeBackground/jquery.youtubebackground.min.js"></script>
+    <script type="text/javascript" async="async" src="https://use.fontawesome.com/bc8520503f.js"></script>
+    <script type="text/javascript" async="async" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" async="async" src="vendor/fullpage/fullpage.min.js"></script>
+    <script type="text/javascript" async="async" src="vendor/isotope/isotope.pkgd.min.js"></script>
+    <script type="text/javascript" async="async" src="vendor/jquery.validate.min.js"></script>
     <script type="text/javascript" src="https://www.google.com/recaptcha/api.js" async defer></script>
-    <script type="text/javascript" src="vendor/fullpage/fullpage.js"></script>
-    <script type="text/javascript" src="vendor/magnific-popup/jquery.magnific-popup.js"></script>
-    <script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
-      
+    <script type="text/javascript" async="async" src="vendor/fluidbox/fluidbox.js"></script>
+    <script type="text/javascript" async="async" src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+    <script type="text/javascript" async="async" src="js/main.min.js"></script>
   </body>
 </html>
