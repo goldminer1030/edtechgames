@@ -13,14 +13,14 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="vendor/fullpage/fullpage.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/fullpage/fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/animate.min.css" media="all">
-    <link rel="stylesheet" type="text/css" href="vendor/paraCss/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="vendor/paraCss/normalize.min.css"/>
     <link rel="stylesheet" type="text/css" href="vendor/bootstrap/bootstrap.min.css">
     <link rel="stylesheet" type="text/css" href="vendor/fluidbox/fluidbox.css">
-    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.css">
-    <link rel="stylesheet" type="text/css" href="css/common.css">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="vendor/magnific-popup/magnific-popup.min.css">
+    <link rel="stylesheet" type="text/css" href="css/common.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.min.css">
 
   </head>
 
