@@ -1,154 +1,165 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-<body>
-<script type="text/javascript" src="https://app.sendsafely.com/js/external/SendSafelyDropzone.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
-<link rel="stylesheet" href="css/secure.css" type="text/css">
-<script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="author" content="EDTECH GAMES, LLC">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="Keywords" content="EDTECH GAMES">
 
-<script>
-$(document).ready(function() {
- var dropzoneId = 'zAUuS0sCtdzQ_ptCXnjIwklxgZ3f4bigUt6ujSDkrbc';
- var placeholderElement = $('#dropzone-placeholder-div');
- var formField = $('#sendsafely-link');
+    <title>Edtech-Games</title>
 
- //Create a new instance.
- var widget = new SendSafelyDropzone(dropzoneId, placeholderElement, formField);
+    <link rel="stylesheet" href="css/bootstrap.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/secure.css" type="text/css">
 
- //Customize the field that includes the link (the {url} placeholder will get replaced with the actual link)
- widget.INJECTED_TEXT = 'Files attached using SendSafely: {url}';
+  </head>
 
- //Finally we are ready to initialize the Dropzone Widget.
- widget.initialize();
-});
-</script>
+  <body>
+  <script type="text/javascript" src="https://app.sendsafely.com/js/external/SendSafelyDropzone.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+  <script src="js/bootstrap.min.js" crossorigin="anonymous"></script>
+
+  <script>
+    $(document).ready(function() {
+    var dropzoneId = 'zAUuS0sCtdzQ_ptCXnjIwklxgZ3f4bigUt6ujSDkrbc';
+    var placeholderElement = $('#dropzone-placeholder-div');
+    var formField = $('#sendsafely-link');
+
+    //Create a new instance.
+    var widget = new SendSafelyDropzone(dropzoneId, placeholderElement, formField);
+
+    //Customize the field that includes the link (the {url} placeholder will get replaced with the actual link)
+    widget.INJECTED_TEXT = 'Files attached using SendSafely: {url}';
+
+    //Finally we are ready to initialize the Dropzone Widget.
+    widget.initialize();
+    });
+  </script>
 
 
-<div style="padding-top:20px; margin:auto; max-width:400px">
-<form id="form1" name="myForm" onsubmit="return(validate());">
-  <div class="form-group">
-    <label>Your Name</label>
-    <input type="text" class="form-control" name="nameofanyone"   id="nameofanyone" placeholder="Enter your name">
-    <span class="alert-danger" id="nameofanyonetext"></span>
+  <div style="padding-top:20px; margin:auto; max-width:400px">
+    <form id="form1" name="myForm" onsubmit="return(validate());">
+      <div class="form-group">
+        <label>Your Name</label>
+        <input type="text" class="form-control" name="nameofanyone"   id="nameofanyone" placeholder="Enter your name">
+        <span class="alert-danger" id="nameofanyonetext"></span>
+      </div>
+      <div class="form-group">
+        <label>Your Email Address</label>
+        <input type="text" class="form-control" name="emailofaanyone"  id="emailofaanyone" placeholder="Enter your email address">
+        <span class="alert-danger" id="emailofaanyonetext"></span>
+      </div>
+        <div class="form-group">
+        <label>Files</label>
+      <div id="dropzone-placeholder-div"></div>
+        <input type="hidden" name="sendsafely-link" id="sendsafely-link">
+      </div>
+      <input type="submit" class="btn btn-primary" name="submit_secure_upload" id="submit_secure_upload" > </input>
+
+    </form>
+    <div class="text-center new_pdd">
+      <img id="messageimg" class="none" src ="../images/yes123.png">
+      <h1 id="message" class="none">Thank You</h1>
+    </div>
   </div>
-  <div class="form-group">
-    <label>Your Email Address</label>
-    <input type="text" class="form-control" name="emailofaanyone"  id="emailofaanyone" placeholder="Enter your email address">
-    <span class="alert-danger" id="emailofaanyonetext"></span>
-  </div>
-    <div class="form-group">
-    <label>Files</label>
-   <div id="dropzone-placeholder-div"></div>
-    <input type="hidden" name="sendsafely-link" id="sendsafely-link">
-  </div>
-  <input type="submit" class="btn btn-primary" name="submit_secure_upload" id="submit_secure_upload" > </input>
-
-</form>
-<div class="text-center new_pdd">
-<img id="messageimg" class="none" src ="../images/yes123.png">
-<h1 id="message" class="none">Thank You</h1>
-</div>
-</div>
 
 
-<script type="text/javascript">
-  
-      // Form validation code will come here.
-      function validate()
-      {
+    <script type="text/javascript">
+      
+          // Form validation code will come here.
+          function validate()
+          {
 
-     
-      }
-	$("#form1").submit(function(e) {
-	e.preventDefault();
-    if( document.myForm.nameofanyone.value == "" && document.myForm.emailofaanyone.value == "" )
-         {
-            $("#nameofanyone").addClass('frm_name');
-            $("#emailofaanyone").addClass('frm_name');
-            $('#nameofanyonetext').text("*Please enter your name*");
-            $('#emailofaanyonetext').text("*Please enter your email*");
-            document.myForm.nameofanyone.focus() ;
-            return false;
-         }
-         else{
-            $("#nameofanyone").removeClass('frm_name');
-            $('#nameofanyonetext').html('');
-            $("#emailofaanyone").removeClass('frm_name');
-            $('#emailofaanyonetext').html('');
-            }
-    
-         if( document.myForm.nameofanyone.value == "" )
-         {
-            $("#nameofanyone").addClass('frm_name');
-            $('#nameofanyonetext').text("*Please enter your name*");
-            document.myForm.nameofanyone.focus() ;
-            return false;
-         }
-         else{
-            $("#nameofanyone").removeClass('frm_name');
-            $('#nameofanyonetext').html('');
-          }
-
-         
-         if( document.myForm.emailofaanyone.value == "" )
-         {
-            $("#emailofaanyone").addClass('frm_name');
-            $('#emailofaanyonetext').text("*Please enter your email*");
-            document.myForm.emailofaanyone.focus() ;
-            return false;
-         }
-         else{
-            $("#emailofaanyone").removeClass('frm_name');
-            $('#emailofaanyonetext').html('');
-          }
-
-  
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        if (reg.test(emailofaanyone.value) == false) 
-        {
-           $("#emailofaanyone").addClass('frm_name');
-           $('#emailofaanyonetext').text("*Please enter valid email*");
-            return false;
-        }
-         else{
-            $("#emailofaanyone").removeClass('frm_name');
-            $('#emailofaanyonetext').html('');
-          }
-
-          if(!$("#emailofaanyone").hasClass("frm_name") && !$("#nameofanyone").hasClass("frm_name") ){
-	    $("#form1").addClass("none");
-           }
         
+          }
+      $("#form1").submit(function(e) {
+      e.preventDefault();
+        if( document.myForm.nameofanyone.value == "" && document.myForm.emailofaanyone.value == "" )
+            {
+                $("#nameofanyone").addClass('frm_name');
+                $("#emailofaanyone").addClass('frm_name');
+                $('#nameofanyonetext').text("*Please enter your name*");
+                $('#emailofaanyonetext').text("*Please enter your email*");
+                document.myForm.nameofanyone.focus() ;
+                return false;
+            }
+            else{
+                $("#nameofanyone").removeClass('frm_name');
+                $('#nameofanyonetext').html('');
+                $("#emailofaanyone").removeClass('frm_name');
+                $('#emailofaanyonetext').html('');
+                }
+        
+            if( document.myForm.nameofanyone.value == "" )
+            {
+                $("#nameofanyone").addClass('frm_name');
+                $('#nameofanyonetext').text("*Please enter your name*");
+                document.myForm.nameofanyone.focus() ;
+                return false;
+            }
+            else{
+                $("#nameofanyone").removeClass('frm_name');
+                $('#nameofanyonetext').html('');
+              }
+
+            
+            if( document.myForm.emailofaanyone.value == "" )
+            {
+                $("#emailofaanyone").addClass('frm_name');
+                $('#emailofaanyonetext').text("*Please enter your email*");
+                document.myForm.emailofaanyone.focus() ;
+                return false;
+            }
+            else{
+                $("#emailofaanyone").removeClass('frm_name');
+                $('#emailofaanyonetext').html('');
+              }
+
+      
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (reg.test(emailofaanyone.value) == false) 
+            {
+              $("#emailofaanyone").addClass('frm_name');
+              $('#emailofaanyonetext').text("*Please enter valid email*");
+                return false;
+            }
+            else{
+                $("#emailofaanyone").removeClass('frm_name');
+                $('#emailofaanyonetext').html('');
+              }
+
+              if(!$("#emailofaanyone").hasClass("frm_name") && !$("#nameofanyone").hasClass("frm_name") ){
+          $("#form1").addClass("none");
+              }
+            
 
 
-	$(this).addClass("none");
-	$("#message").addClass("show").removeClass("none");
-        $("#messageimg").addClass("show").removeClass("none");
-	});
+      $(this).addClass("none");
+      $("#message").addClass("show").removeClass("none");
+            $("#messageimg").addClass("show").removeClass("none");
+      });
 
-$(document).ready(function () {
+    $(document).ready(function () {
 
 
-        $("#emailofaanyone").change(function(){
-        var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
-        if (reg.test(emailofaanyone.value) == false) 
-        {
-           $("#emailofaanyone").addClass('frm_name');
-           $('#emailofaanyonetext').text("*Please enter valid email*");
-            return false;
-        }else{
-              $("#emailofaanyone").removeClass('frm_name');
-              $('#emailofaanyonetext').html('');
-                 }
-             });
-        $("#nameofanyone").change(function(){
-            $("#nameofanyone").removeClass('frm_name');
-            $('#nameofanyonetext').html('');
-             });
- });
+            $("#emailofaanyone").change(function(){
+            var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+            if (reg.test(emailofaanyone.value) == false) 
+            {
+              $("#emailofaanyone").addClass('frm_name');
+              $('#emailofaanyonetext').text("*Please enter valid email*");
+                return false;
+            }else{
+                  $("#emailofaanyone").removeClass('frm_name');
+                  $('#emailofaanyonetext').html('');
+                    }
+                });
+            $("#nameofanyone").change(function(){
+                $("#nameofanyone").removeClass('frm_name');
+                $('#nameofanyonetext').html('');
+                });
+    });
 
-</script>
-</body>
+    </script>
+  </body>
 </html>
 

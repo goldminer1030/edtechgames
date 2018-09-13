@@ -88,21 +88,21 @@
           <div class="row">
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text">
-                <p>It is clear from the research that students are failing at fractions, creating "<i>a major obstacle to further progress in mathematics</i>."</p>
-                <p>Our powerful curriculum corrects this "<i>critical, foundational</i>" problem by pinpointing the specific deficits of each student then filling in all the little gaps with our unique, granular curriculum.</p>
-                <p>Then we provide sufficient practice to develop genuine fluency as we carefully nurture them along from conceptual understanding to operational procedures to rigorous problem solving.</p>
-                <div class="reference"> -National Mathematics Advisory Panel Final Report 2008</div>
+                <p>The research is clear that students are failing at fractions. This failure presents "<i>a major obstacle to further progress in mathematics</i>."</p>
+                <p>Our powerful curriculum corrects this "<i>critical foundation</i>" deficiency by pinpointing the specific deficits of each student then filling them in with its unique, granular design. We carefully scaffold students up from conceptual understanding to operational procedures to rigorous problem solving.</p>
+                <p>See for yourself. When your students finish our game, they'll be fluent with fractions.</p>
+                <div class="reference"> -National Mathematics Advisory Panel, Final Report, 2008</div>
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
                   <div class="col-xs-6 sc-wrapper">
-                    <a class="screenshot" href="images/boybot1.png" data-fluidbox="true">
-                      <img src="images/boybot1.png" alt="screenshot">
+                    <a class="screenshot" href="images/Research-Graph-4th_2018_09.png" data-fluidbox="true">
+                      <img src="images/Research-Graph-4th_2018_09.png" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-6 sc-wrapper">
-                    <a class="screenshot" href="images/unit2.png" data-fluidbox="true">
-                      <img src="images/unit2.png" alt="screenshot">
+                    <a class="screenshot" href="images/Unit_1.0_Wide.png" data-fluidbox="true">
+                      <img src="images/Unit_1.0_Wide.png" alt="screenshot">
                     </a>
                   </div>
                 </div>
@@ -112,8 +112,8 @@
               <div class="character">
                 <div class="testimonial-wrapper">
                   <div class="testimonial">
-                    <p class="quote">"27% of eighth-graders could not correctly shade 1/3 of a rectangle."</p>
-                    <p class="client-name">- U.S. Department of Education, 2004).</p>
+                    <p class="quote"><i>"27% of eighth-graders could not correctly shade 1/3 of a rectangle."</i></p>
+                    <p class="client-name">- U.S. Department of Education, 2004.</p>
                   </div>
                 </div>
                 <img src="images/Rocko.png" alt="character">
@@ -124,12 +124,12 @@
       </div>
       <div class="section info-section" id="section2">
         <section class="parts-all mydiv" id="part_two">
-          <h1><span class="blue-text">Intense</span> Engagement Enables <span class="blue-text">Intense</span> Learning</h1>
+          <h1><span class="blue-text">Intense</span> Engagement = <span class="blue-text">Intense</span> Learning</h1>
           <div class="row">
             <div class="col-md-7 col-md-push-5 col-sm-6 col-sm-push-6 sub-details left-side">
               <div class="sub-detail-text">
-                <p>Any program can keep a student amused and interactive. That's just not enough. Our high-end gameplay provides an extra level of engagement that enables them to work <b>intensely</b> on our very rigorous, powerful curriculum.</p>
-                <p>But you'll have to see it for yourself to believe it. So grab a student and watch how they learn in our program.</p>
+                <p>Any program can keep a student amused and occupied. That's not good enough. Our high-end gameplay provides an extra level of engagement that enables them to work <b>intensely</b> through our rigorous, powerful curriculum.</p>
+                <p>But you'll have to see it for yourself to believe it. So grab a student and watch how effectively they learn in our program.</p>
               </div>
               <div class="sub-detail-screenshots">
                 <div class="row">
@@ -156,8 +156,8 @@
                 <img src="images/character02.png" alt="character">
                 <div class="testimonial-wrapper">
                   <div class="testimonial">
-                    <p class="quote">"Here's a really cool quote. It was the greatest thing ever!"</p>
-                    <p class="client-name">- Jone Doe</p>
+                    <p class="quote">"Now I don't have to spend my whole year re-teaching prerequisite skills."</p>
+                    <p class="client-name">Heather Wrigley<br>4th-grade teacher</p>
                   </div>
                 </div>
               </div>
@@ -171,8 +171,9 @@
           <div class="row">
             <div class="col-md-7 col-sm-6 sub-details right-side">
               <div class="sub-detail-text four-screenshots">
-                <p>The whole point of this program is to ensure that when your students finish, they're <b>ready</b> for their End of Grade test; or they're genuinely ready for new year's content. We're challenging and we're rigorous, but we will get your students where you really want them to be. <br>
-                <br><b>Research Results</b><br>In our first randomized study with a control group, students who played our Fractions game for two hours improved <b>9%</b> more than the control group. <b>16%</b> if you remove outliers and students already scoring above 90%!</p>
+                <p>The whole point of this program is to ensure that when your students finish, they're <b>ready</b> for their End of Grade test; or they're genuinely ready for their new grade's content. We're challenging and we're rigorous, but we will get your students where you really want them to be. <br>
+                <br><b>Research Results</b><br>In our first randomized study with a control group, students who played our Fractions game for two hours improved <b>9%</b> more than the control group on an external assessment. <b>16%</b> if you remove outliers and students already scoring above 90%!</p>
+                <p>Run a pilot with your own class so you can make a data-driven decision based on your own student results.</p>
               </div>
               <div class="sub-detail-screenshots four-screenshots">
                 <div class="row">
@@ -204,8 +205,8 @@
               <div class="character">
                 <div class="testimonial-wrapper">
                   <div class="testimonial">
-                    <p class="quote">"Here's a really cool quote. It was the greatest thing ever!"</p>
-                    <p class="client-name">- Jone Doe</p>
+                    <p class="quote">"It's so fun to teach a class that's all caught up in fractions."</p>
+                    <p class="client-name">-Brenda Miller<br>3rd-grade teacher</p>
                   </div>
                 </div>
                 <img src="images/character03.png" alt="character">
@@ -373,7 +374,7 @@
               <h4 class="modal-title">Secure Upload</h4>
             </div>
             <div class="modal-body">
-              <iframe id="my-mdmdl" width="100%" height="400px" src="https://edtechgames.com/tempsite1/secureupload/index.html" frameborder="0" enablejsapi="1" allowfullscreen ></iframe>
+              <iframe id="my-mdmdl" width="100%" height="400px" src="secureupload/index.html" frameborder="0" enablejsapi="1" allowfullscreen ></iframe>
             </div>
             <div class="modal-footer mo-footr">
               <img src="images/Logo_ETG3.png" alt="logo">
