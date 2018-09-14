@@ -520,7 +520,7 @@ $(document).ready(function () {
     anchors: ['heroVideo', 'intenseEngagement', 'cuttingEdgeCurriculum', 'vastlyHigherEfficacy', 'screenshots', 'contact'],
     responsiveWidth: 1,
     responsiveHeight: 1,
-    sectionsColor: ['', '#D3D3D3', '#D3D3D3', '#D3D3D3', '#000', ''],
+    sectionsColor: ['', '#D3D3D3', '#17ACD5', '#D3D3D3', '#000', ''],
     navigation: true,
     navigationPosition: 'right',
     navigationTooltips: ['Hero Video', 'Intense Engagement', 'Cutting Edge Curriculum', 'Vastly Higher Efficacy', 'Screenshots', 'Contact'],
@@ -550,6 +550,13 @@ $(document).ready(function () {
         // contact and footer section
         var section_height = $('#part_five').height(), form_height = $('.form-wrapper').outerHeight(true),
           footer_height = $('footer').outerHeight(true), form_pos_y = parseInt((section_height - form_height - footer_height) / 2);
+        // if section two change the navigation color to white
+        if (destination.index == 2) {
+          $('#fp-nav').addClass('white-color');
+        } else {
+          $('#fp-nav').removeClass('white-color');
+        }
+        
         if (destination.index == 5 && isMobile) {
           $('footer').css("position", "absolute");
           $('footer').css("bottom", "27px");

@@ -42,6 +42,7 @@ padding: 0 70px;
 /* YTPlayer below header */
 #YTPlayer-container {
   top: 51px !important;
+  background-color: #17acd4;
 }
 
 #replacement_video {
@@ -448,6 +449,13 @@ overflow-y: hidden !important;
   top: -4px;
   right: 15px;
   color: #00b1db;
+}
+#fp-nav.white-color ul li a span,
+.fp-slidesNav.white-color ul li a span {
+  background: #fff;
+}
+#fp-nav.white-color ul li .fp-tooltip {
+  color: #fff;
 }
 
 /* contact form */

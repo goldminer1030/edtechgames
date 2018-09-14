@@ -15,9 +15,14 @@
 }
 
 #part_one,
-#part_two,
 #part_three {
     background-color: #D3D3D3;
+}
+#part_two {
+    background-color: #17ACD5;
+}
+#part_two .blue-text {
+    color: #fff;
 }
 
 #part_four {

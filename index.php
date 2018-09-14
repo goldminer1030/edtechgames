@@ -50,7 +50,7 @@
     <div id="fullpage">
       <div class="section" id="section0">
         <div id="background-video"></div>
-        <section id="video-sect" class="mydiv"  >
+        <section id="video-sect" class="mydiv">
           <div class="content-overhead">
             <h1 class="wow bounceInUp go">reinventing<br>educational software</h1>
             <p>Where intense engagement unleashes cutting-edge curriculum</p>
