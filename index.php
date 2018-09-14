@@ -97,12 +97,12 @@
                 <div class="row">
                   <div class="col-xs-6 sc-wrapper">
                     <a class="screenshot" href="images/Research-Graph-4th_2018_09.png" data-fluidbox="true">
-                      <img src="images/Research-Graph-4th_2018_09.png" alt="screenshot">
+                      <img src="images/Research-Graph-4th_2018_09_md.png" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-6 sc-wrapper">
                     <a class="screenshot" href="images/Unit_1.0_Wide.png" data-fluidbox="true">
-                      <img src="images/Unit_1.0_Wide.png" alt="screenshot">
+                      <img src="images/Unit_1.0_Wide_sm.png" alt="screenshot">
                     </a>
                   </div>
                 </div>
@@ -116,7 +116,7 @@
                     <p class="client-name">- U.S. Department of Education, 2004.</p>
                   </div>
                 </div>
-                <img src="images/Rocko.png" alt="character">
+                <img src="images/Rocko_sm.png" srcset="images/Rocko_sm.png 767w, images/Rocko_md.png 1200w, images/Rocko_lg.png 1400w" alt="character">
               </div>
             </div>
           </div>
@@ -135,17 +135,17 @@
                 <div class="row">
                   <div class="col-xs-4 sc-wrapper">
                     <a class="screenshot" href="images/1.png" data-fluidbox="true">
-                      <img src="images/1.png" alt="screenshot">
+                      <img src="images/1_sm.png" srcset="images/1_sm.png 767w, images/1_md.png 1200w, images/1_lg.png 1400w" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-4 sc-wrapper">
                     <a class="screenshot" href="images/2.png" data-fluidbox="true">
-                      <img src="images/2.png" alt="screenshot">
+                      <img src="images/2_sm.png" srcset="images/2_sm.png 767w, images/2_md.png 1200w, images/2_lg.png 1400w" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-4 sc-wrapper">
                     <a class="screenshot" href="images/3.png" data-fluidbox="true">
-                      <img src="images/3.png" alt="screenshot">
+                      <img src="images/3_sm.png" srcset="images/3_sm.png 767w, images/3_md.png 1200w, images/3_lg.png 1400w" alt="screenshot">
                     </a>
                   </div>
                 </div>
@@ -179,22 +179,22 @@
                 <div class="row">
                   <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot" href="images/image02.png" data-fluidbox="true">
-                      <img src="images/1.png" alt="screenshot">
+                      <img src="images/1_sm.png" srcset="images/1_sm.png 767w, images/1_md.png 1200w, images/1_lg.png 1400w" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot" href="images/image03.png" data-fluidbox="true">
-                      <img src="images/2.png" alt="screenshot">
+                      <img src="images/2_sm.png" srcset="images/2_sm.png 767w, images/2_md.png 1200w, images/2_lg.png 1400w" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot" href="images/image04.png" data-fluidbox="true">
-                      <img src="images/3.png" alt="screenshot">
+                      <img src="images/3_sm.png" srcset="images/3_sm.png 767w, images/3_md.png 1200w, images/3_lg.png 1400w" alt="screenshot">
                     </a>
                   </div>
                   <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot lightbox-video" href="https://www.youtube.com/watch?v=go-OKanl3kI" title="Video Play">
-                      <img src="images/4.png" alt="screenshot">
+                      <img src="images/4_sm.png" srcset="images/4_sm.png 767w, images/4_md.png 1200w, images/4_lg.png 1400w" alt="screenshot">
                       <i class="fa fa-play-circle-o play-btn"></i>
                     </a>
                   </div>
@@ -209,7 +209,7 @@
                     <p class="client-name">-Brenda Miller<br>3rd-grade teacher</p>
                   </div>
                 </div>
-                <img src="images/character03.png" alt="character">
+                <img src="images/character03.png" srcset="images/character03_sm.png 767w, images/character03_md.png 1200w, images/character03_lg.png 1400w" alt="character">
               </div>
             </div>
           </div>
@@ -228,25 +228,25 @@
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/customcharacter1_new.png" data-fluidbox="true">
-                <img src="images/customcharacter1_new.png" alt="screenshot">
+                <img src="images/customcharacter1_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/grodpole1_new.png" data-fluidbox="true">
-                <img src="images/grodpole1_new.png" alt="screenshot">
+                <img src="images/grodpole1_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/shrine1c2_new.png" data-fluidbox="true">
-                <img src="images/shrine1c2_new.png" alt="screenshot">
+                <img src="images/shrine1c2_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/story1_new_new.png" data-fluidbox="true">
-                <img src="images/story1_new_new.png" alt="screenshot">
+                <img src="images/story1_new_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
@@ -258,25 +258,25 @@
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/customcharacter1_new.png" data-fluidbox="true">
-                <img src="images/customcharacter1_new.png" alt="screenshot">
+                <img src="images/customcharacter1_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/grodpole1_new.png" data-fluidbox="true">
-                <img src="images/grodpole1_new.png" alt="screenshot">
+                <img src="images/grodpole1_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/shrine1c2_new.png" data-fluidbox="true">
-                <img src="images/shrine1c2_new.png" alt="screenshot">
+                <img src="images/shrine1c2_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
               <p class="brick-title">screenshot</p>
               <a class="brick" href="images/story1_new_new.png" data-fluidbox="true">
-                <img src="images/story1_new_new.png" alt="screenshot">
+                <img src="images/story1_new_new_sm.png" alt="screenshot">
               </a>
             </div>
             <div class="grid-item">
