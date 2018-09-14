@@ -73,12 +73,10 @@ padding: 0 70px;
   font-family: 'Open Sans', sans-serif;
 }
 #video-sect .content-overhead .lightbox-video {
-  font-size: 85px;
-  color: #fff;
   transition: all 0.3s ease 0s;
 }
 #video-sect .content-overhead .lightbox-video:hover {
-  color: #ddd;
+  opacity: 0.9;
 }
 .arrow-cont {
 height: 130px;
@@ -345,7 +343,7 @@ overflow-y: hidden !important;
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 23px;
+  width: 40%;
 }
 .info-section .sub-details .sub-detail-screenshots .screenshot.lightbox-video:hover .play-btn {
   font-size: 26px;
@@ -906,10 +904,7 @@ overflow-y: hidden !important;
     margin-bottom: 15px;
   }
   .info-section .sub-details .sub-detail-screenshots .screenshot.lightbox-video .play-btn {
-    font-size: 33px;
-  }
-  .info-section .sub-details .sub-detail-screenshots .screenshot.lightbox-video:hover .play-btn {
-    font-size: 38px;
+    width: 25%;
   }
   .grid-container {
     height: calc(100% - 66px) !important;
