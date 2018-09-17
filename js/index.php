@@ -50,12 +50,12 @@
     <div id="fullpage">
       <div class="section" id="section0">
         <div id="background-video"></div>
-        <section id="video-sect" class="mydiv">
+        <section id="video-sect" class="mydiv"  >
           <div class="content-overhead">
             <h1 class="wow bounceInUp go">reinventing<br>educational software</h1>
             <p>Where intense engagement unleashes cutting-edge curriculum</p>
             <a class="lightbox-video" href="https://www.youtube.com/watch?v=go-OKanl3kI" title="Video Play">
-              <img src="images/video_play_btn.png" alt="video play button">
+              <i class="fa fa-play-circle-o play-btn"></i>
             </a>
           </div>
           <div id="moveDown">
@@ -195,7 +195,7 @@
                   <div class="col-xs-3 col-sm-6 col-lg-3 sc-wrapper">
                     <a class="screenshot lightbox-video" href="https://www.youtube.com/watch?v=K9PqfczjH8A" title="Video Play">
                       <img src="images/Unit_2.1.1_sm.png" srcset="images/Unit_2.1.1_sm.png 767w, images/Unit_2.1.1_md.png 1200w, images/Unit_2.1.1_lg.png 1400w" alt="screenshot">
-                      <img class="play-btn" src="images/video_play_btn.png" alt="video play button">
+                      <i class="fa fa-play-circle-o play-btn"></i>
                     </a>
                   </div>
                 </div>
@@ -296,6 +296,9 @@
                 <img src="images/Draggable-Fraction-Pieces-Square_sm.png" alt="screenshot">
               </a>
             </div>
+            
+
+            
           </div>
         </section>
       </div>
@@ -420,6 +423,7 @@
     * */
    (function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);</script>
     <script type="text/javascript" async src="vendor/jQuery.YoutubeBackground/jquery.youtubebackground.min.js"></script>
+    <script type="text/javascript" async src="https://use.fontawesome.com/bc8520503f.js"></script>
     <script type="text/javascript" async src="https://www.youtube.com/iframe_api"></script>
     <script type="text/javascript" async src="vendor/fullpage/fullpage.min.js"></script>
     <script type="text/javascript" async src="vendor/isotope/isotope.pkgd.min.js"></script>
