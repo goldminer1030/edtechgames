@@ -493,7 +493,11 @@ $(document).ready(function () {
     isMobile = true;
   }
 
-  // Youtube video player
+  if(isMobile) {
+    // set background image from array
+    $('#section0').css("background-image", "url(" + images[0] + ")");
+  }
+  // load Youtube video player
   var heroVideo = $('#background-video').YTPlayer({
     ratio: 16 / 9,
     videoId: 'zC7j2-dkLS4',
