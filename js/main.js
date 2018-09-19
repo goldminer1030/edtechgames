@@ -1,7 +1,7 @@
 var wall,
-  images = Array("../images/image13.png",
-    "../images/image14.png",
-    "../images/image15.png"),
+  images = Array("../images/vertbkgd01.png",
+    "../images/vertbkgd02.png",
+    "../images/vertbkgd03.png"),
   currimg = 0, max_grid_items = 11,
   SCREEN_ORIENTATION_INIT = -1,
   SCREEN_ORIENTATION_PORTRAIT = 0,
@@ -276,6 +276,7 @@ var wall,
       20,
     ],
   ],
+  galleryItemMargin = 5,
   isMobile = false; //initiate as false
 
 /**
