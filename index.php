@@ -60,10 +60,8 @@
               <img src="images/video_play_btn.png" alt="video play button">
             </a>
           </div>
-          <div id="moveDown">
-            <div class="arrow-cont wow bounceInDown go">
-              <a href="#intenseEngagement"><span></span><span></span><span></span></a>
-            </div>
+          <div class="arrow-cont wow bounceInDown go">
+            <a href="#intenseEngagement"><span></span><span></span><span></span></a>
           </div>
           <div id="replacement_video">
             <div id="myCarousel" class="carousel slide" data-ride="carousel">

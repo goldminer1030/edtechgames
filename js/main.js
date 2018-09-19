@@ -496,6 +496,9 @@ $(document).ready(function () {
   if(isMobile) {
     // set background image from array
     $('#section0').css("background-image", "url(" + images[0] + ")");
+    // set the scroll down button position
+    $('.arrow-cont').css("top", ($(window).height() - 35 ) + "px");
+    $('.arrow-cont').css("transform", "translateY(-50%)");
   }
   // load Youtube video player
   var heroVideo = $('#background-video').YTPlayer({
