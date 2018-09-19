@@ -62,8 +62,7 @@
           </div>
           <div id="moveDown">
             <div class="arrow-cont wow bounceInDown go">
-              <span class="line"></span>
-              <span class="arrow"></span>
+              <a href="#intenseEngagement"><span></span><span></span><span></span></a>
             </div>
           </div>
           <div id="replacement_video">
