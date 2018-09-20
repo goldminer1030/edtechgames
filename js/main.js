@@ -567,7 +567,8 @@ $(document).ready(function () {
         
         if (destination.index == 5 && isMobile) {
           $('footer').css("position", "absolute");
-          $('footer').css("bottom", "27px");
+          $('footer').css("top", ($(window).height() - 65) + "px");
+          $('footer').css("transform", "translateY(-50%)");
           $('.form-wrapper').css("top", form_pos_y + "px");
           $('.form-wrapper').css("transform", "none");
         }
