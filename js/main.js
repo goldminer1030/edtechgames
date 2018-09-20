@@ -778,6 +778,17 @@ $(window).resize(function () {
   if(isOrientationChanged()) {
     updateMasonryGrid();
   }
+
+  // footer position
+  if (isMobile) {
+    $('footer').css("position", "absolute");
+    $('footer').css("top", ($(window).height() - 65) + "px");
+    $('footer').css("transform", "translateY(-50%)");
+  } else {
+    $('footer').css("position", "fixed");
+    $('footer').css("top", "inherit");
+    $('footer').css("transform", "none");
+  }
 });
 
 /**
