@@ -277,6 +277,7 @@ var wall,
     ],
   ],
   galleryItemMargin = 5,
+  scrollDownHeight = 70,
   isMobile = false; //initiate as false
 
 /**
@@ -511,8 +512,7 @@ $(document).ready(function () {
     // set background image from array
     $('#section0').css("background-image", "url(" + images[0] + ")");
     // set the scroll down button position
-    $('.arrow-cont').css("top", ($(window).height() - 35 ) + "px");
-    $('.arrow-cont').css("transform", "translateY(-50%)");
+    $('.arrow-cont').css("top", ($(window).height() - scrollDownHeight) + "px");
   }
   // load Youtube video player
   var heroVideo = $('#background-video').YTPlayer({
@@ -794,6 +794,9 @@ $(window).resize(function () {
   if(isOrientationChanged()) {
     updateMasonryGrid();
   }
+
+  // set the scroll down button position
+  $('.arrow-cont').css("top", ($(window).height() - scrollDownHeight) + "px");
 
   // footer position
   var section_height = $('#part_five').height(), form_height = $('.form-wrapper').outerHeight(true) - 20,
