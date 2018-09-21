@@ -440,8 +440,9 @@ function updateMasonryGrid() {
     if (grid_index < map_len) {
       var w = map[grid_index][0], h = map[grid_index][1];
       grid_item.css({
-        'width': w + '%',
-        'height': h + '%',
+        'width': 'calc(' + w + '% - ' + (galleryItemMargin * 2) + 'px)',
+        'height': 'auto',
+        'margin': galleryItemMargin + 'px',
         'background-image': 'url(../' + imageUrl + ')',
         'background-position': 'center',
         'cursor': 'pointer',
@@ -556,14 +557,14 @@ $(document).ready(function () {
         if (destination.index < origin.index) {
           // scroll up
           if (destination.index == 4) {
-            $('.grid-container').css("margin-top", header_height + "px");
+            $('.grid-container').css("margin-top", (header_height + galleryItemMargin) + "px");
           } else {
             $('#section' + destination.index + ' .parts-all').css("margin-top", isMobile ? header_height * 2 + "px" : header_height + "px");
           }
         } else {
           // scroll down
           if (destination.index == 4) {
-            $('.grid-container').css("margin-top", "0");
+            $('.grid-container').css("margin-top", galleryItemMargin + "px");
           } else {
             $('#section' + destination.index + ' .parts-all').css("margin-top", header_height + "px");
           }
@@ -687,6 +688,11 @@ $(document).ready(function () {
   // update main background image
   setTimeout(updateMainBackgroundImage, 3000);
 
+  // add margin to masonry wrapper
+  $('.grid-container').css("margin-left", galleryItemMargin + "px");
+  $('.grid-container').css("margin-right", galleryItemMargin + "px");
+  $('.grid-container').css("margin-bottom", galleryItemMargin + "px");
+
   // masonry grid
   if (isOrientationChanged()) {
     updateMasonryGrid();
@@ -788,7 +794,7 @@ $(window).resize(function () {
   if ($(window).width() >= 768) {
     $('#section0').css("background-image", "none");
   }
-  $('.grid-container').css("margin-top", header_height + "px");
+  $('.grid-container').css("margin-top", (header_height + galleryItemMargin) + "px");
 
   // if orientation is changed, update masonry grid
   if(isOrientationChanged()) {
