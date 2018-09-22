@@ -352,8 +352,8 @@ var update_fontsize = function () {
     }
     info_section.find('.sub-details .sub-detail-text p').each(function () {
       var current_pHeight = $(this).outerHeight();
-      var current_lineHeight = parseInt($(this).css('line-height'));
-      current_lines += parseInt(current_pHeight / current_lineHeight);
+      var current_lineHeight = parseFloat($(this).css('line-height'));
+      current_lines += Math.round(parseFloat(current_pHeight / current_lineHeight));
     });
     // calculate line height and margin bottom (=line-height/2)
     var expected_lineHeight = parseFloat(divHeight / (current_lines + ((paragraph_count - 1) / 2) ));
