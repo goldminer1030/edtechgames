@@ -437,11 +437,29 @@ function isOrientationChanged() {
 
 function updateMasonryGrid() {
   // arrange grid item
-  var grid_items = $('#part_four .grid-item').length, map = getGridMap(grid_items), map_len = map.length, grid_index = 0;
+  var grid_items = $('#part_four .grid-item').length, map = getGridMap(grid_items), map_len = map.length, grid_index = 0, window_width = $(window).width(), window_height = $(window).height(), image_loaded = 0;
   $('#part_four .grid-item').each(function (e) {
-    var grid_item = $(this), imageUrl = grid_item.find('img').attr('src');
+    var grid_item = $(this), image = grid_item.find('img'), imageUrl = image.attr('src'), image_width = image.width(), image_height = image.height();
     if (grid_index < map_len) {
-      var w = map[grid_index][0], h = map[grid_index][1];
+      // if image is not loaded yet (0 on Chrome, 70 on firefox)
+      if(image_width < 100) {
+        image.on('load', function () {
+          image_width = $(this).width();
+          image_height = $(this).height();
+          image_loaded++;
+          console.log('image reloaded ' + image_loaded + ' / ' + grid_items);
+          // if all images loaded, create masonry layout
+          if (image_loaded == grid_items) {
+            console.log('recreate masonry layout');
+            $('.grid-container').masonry({
+              itemSelector: '.grid-item',
+              columnWidth: '.grid-sizer',
+              percentPosition: true
+            });
+          }
+        });
+      }
+      var w = map[grid_index][0], h = parseInt(((w * window_width * image_height) / ((window_height - getHeaderHeight()) * image_width)));
       grid_item.css({
         'width': 'calc(' + w + '% - ' + (galleryItemMargin * 2) + 'px)',
         'height': 'auto',
