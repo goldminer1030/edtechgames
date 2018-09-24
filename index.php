@@ -12,6 +12,8 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Khand">
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans">
 
+    <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css">
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="vendor/fullpage/fullpage.min.css" />
     <link rel="stylesheet" type="text/css" href="vendor/animate.min.css" media="all">
@@ -361,7 +363,7 @@
                     <span>&copy; 2018 EDTECH GAMES, LLC</span>
                   </ul>
                   <ul class="pull-right">
-                    <li><a href="javascript:void(0);" data-toggle="modal" data-target="#myModal">Secure Upload</a></li>
+                    <li><a href="" data-toggle="modal" data-target="#dropzone_modal">Secure Upload</a></li>
                     <li><a href="pdfs/privacy_policy.pdf">Privacy</a></li>
                     <li><a href="pdfs/privacy_policy_website.pdf">Site Privacy</a></li>
                     <li><a href="pdfs/eula.pdf">EULA</a></li>
@@ -375,7 +377,7 @@
     </div>
     <!-- secure upload Modal -->
     <section class="md-secure">
-      <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal fade" id="dropzone_modal" role="dialog">
         <div class="modal-dialog">
           <!-- Modal content-->
           <div class="modal-content">
@@ -384,7 +386,30 @@
               <h4 class="modal-title">Secure Upload</h4>
             </div>
             <div class="modal-body">
-              <iframe id="my-mdmdl" width="100%" height="400px" src="secureupload/index.html" frameborder="0" enablejsapi="1" allowfullscreen ></iframe>
+              <form id="dropzone_form" name="dropzone_form">
+                <div class="form-group">
+                  <label>Your Name</label>
+                  <input type="text" class="form-control" name="dropzone_name" id="dropzone_name" placeholder="Enter your name">
+                </div>
+                <div class="form-group">
+                  <label>Your Email Address</label>
+                  <input type="text" class="form-control" name="dropzone_email" id="dropzone_email" placeholder="Enter your email address">
+                </div>
+                <div class="form-group">
+                  <label>Files</label>
+                  <div id="dropzone-placeholder-div"></div>
+                </div>
+                <div class="text-center">
+                  <button class="btn btn-primary" id="sendsafely-submit" onclick="submitDropZoneForm()" type="button">Submit
+                    <i class="fas fa-spinner fa-spin" id="dropzone_form_spinner"></i>
+                  </button>
+                </div>
+              </form>
+              <div id="dropzone_submit_done">
+                <img src ="images/yes123.png" alt="submit done">
+                <h1>Thank You</h1>
+                <br>Your submission ID# is <span id="dropzone-thread-id">N/A</span><br>
+              </div>
             </div>
             <div class="modal-footer mo-footr">
               <img src="images/Logo_ETG3.png" alt="logo">
@@ -394,19 +419,6 @@
       </div>
     </section>
     <!-- Secure uplaod Modal Ends Here -->
-    <section class="md-secure1">
-      <div class="modal fade" id="myModal1" role="dialog">
-        <div class="modal-dialog">
-          <!-- Modal content-->
-          <div class="modal-content">
-            <div class="modal-body">
-              <iframe width="100%" height="" style="height:100vh;" src="https://www.youtube.com/embed/zC7j2-dkLS4?autoplay=1&mute=1&rel=0&version=3&loop=1&playlist=zC7j2-dkLS4" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen data-keepplaying></iframe>
-              <button type="button" class="close mo-crss" data-dismiss="modal">&times;</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
     <script type="text/javascript" src="vendor/jquery.min.js"></script>
     <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
@@ -421,6 +433,7 @@
     <script type="text/javascript" src="vendor/jQuery.YoutubeBackground/jquery.youtubebackground.min.js"></script>
     <script type="text/javascript" src="https://use.fontawesome.com/bc8520503f.js"></script>
     <script type="text/javascript" src="https://www.youtube.com/iframe_api"></script>
+    <script type="text/javascript" src="https://app.sendsafely.com/js/external/SendSafelyDropzone.js"></script>
     <script type="text/javascript" src="vendor/fullpage/fullpage.min.js"></script>
     <script type="text/javascript" src="vendor/isotope/isotope.pkgd.min.js"></script>
     <script type="text/javascript" src="vendor/jquery.validate.min.js"></script>

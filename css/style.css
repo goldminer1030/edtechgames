@@ -195,58 +195,38 @@ footer .log-bt a i {
 padding-right: 10px;
 }
 .md-secure .mo-head {
-background-color: #337ab7;
-color: #fff;
+  background-color: #337ab7;
+  color: #fff;
 }
 .md-secure .mo-footr {
-padding: 10px;
-text-align: center;
+  padding: 10px;
+  text-align: center;
 }
 .md-secure .mo-footr img {
-width: 200px;
+  width: 200px;
 }
 .md-secure .mo-crss {
-color: #fff;
-opacity: 1;
+  color: #fff;
+  opacity: 1;
 }
 .md-secure .btn-cls {
-float: right;
-font-weight: bold;
-outline: none;
+  float: right;
+  font-weight: bold;
+  outline: none;
 }
-.md-secure1 .modal-dialog {
-height: 100vh;
-width: 100%;
-margin: 0;
-padding: 0;
-display: inline-block;
+#dropzone_modal .modal-body {
+  padding-top: 20px;
+  margin: auto;
+  max-width: 400px;
+  min-height: 320px;
 }
-.md-secure1 .modal-body {
-margin: 0;
-padding: 0;
+#dropzone_form_spinner {
+  display: none;
+  margin-left: 5px;
 }
-.md-secure1 button {
-background-color: #fff !important;
-width: 50px;
-height: 50px;
-opacity: 0.5;
-font-size: 40px;
-position: absolute;
-top: 5px;
-right: 5px;
-}
-.md-secure1 button:hover {
-opacity: 0.9;
-}
-.md-secure1 .modal-content {
-background-color: transparent;
-}
-.md-secure1 #myModal1 {
-z-index: 9999999999;
-}
-.modal-open .md-secure1 .modal {
-overflow-x: hidden;
-overflow-y: hidden !important;
+#dropzone_submit_done {
+  display: none;
+  text-align: center;
 }
 @media (min-width: 768px) {
   .navbar-nav {

@@ -278,6 +278,9 @@ var wall,
   ],
   galleryItemMargin = 5,
   scrollDownHeight = 70,
+  widget,
+  sendSafelyHost = "https://www.sendsafely.com",
+  dropzoneId = "zAUuS0sCtdzQ_ptCXnjIwklxgZ3f4bigUt6ujSDkrbc",
   isMobile = false; //initiate as false
 
 /**
@@ -501,6 +504,98 @@ function isMobileScreen() {
  */
 function getHeaderHeight() {
   return $(window).width() >= 768 ? 66 : 51;
+}
+/**
+ * check if the dropzone form is valid
+ */
+function isDropZoneFormValid() {
+  var isValid = true;
+  if (!/(.+)@(.+){2,}\.(.+){2,}/.test($("#dropzone_email").val())) {
+    alert("You did not provide a valid email address");
+    isValid = false;
+    return isValid;
+  }
+  $("#dropzone_form input[type=text]").each(function () {
+    if (isValid && this.value.trim() == "") {
+      alert("You must complete all input fields");
+      isValid = false;
+      return isValid;
+    }
+  });
+  if (isValid && widget.nbrOfFilesAttached < 1) {
+    alert("You did not attach a file");
+    isValid = false;
+    return isValid;
+  }
+  return isValid;
+}
+/**
+ * Submit to dropzone
+ * @param {*} url 
+ */
+function submitHostedDropzone(url) {
+  var postData = {};
+  postData["name"] = $("#dropzone_name").val();
+  postData["email"] = $("#dropzone_email").val();
+  postData["packageCode"] = widget.packageCode;
+  postData["publicApiKey"] = dropzoneId;
+  $.post(
+    sendSafelyHost + "/auth/json/?action=submitHostedDropzone",
+    postData,
+    function (result) {
+      if (result.integrationUrls !== undefined) {
+        for (i = 0; i < result.integrationUrls.length; i++) {
+          var integrationUrl = result.integrationUrls[i];
+          //Third party form integration...do post to URL
+          var postData = {};
+          postData["digest"] = result.digest;
+          postData["data"] = result.data;
+          postData["secureLink"] = url;
+          $.post(
+            integrationUrl,
+            postData,
+            function (json) {
+              if (json.error != undefined) {
+                alert(json.error);
+              } else {
+                //success
+                $("#dropzone_form").hide();
+                $("#dropzone_submit_done").show();
+              }
+            },
+            "json"
+          );
+        }
+      }
+    }
+  );
+}
+/**
+ * Submit dropzone form
+ */
+function submitDropZoneForm() {
+  if (isDropZoneFormValid()) {
+    $("#dropzone_form_spinner").show();
+    widget.setUnconfirmedSender(
+      $("#dropzone_email")
+        .val()
+        .toLowerCase()
+    );
+    widget.finalizePackage(
+      function (url) {
+        var threadRegex = new RegExp("thread=[A-Za-z0-9-]+");
+        var threadId = threadRegex
+          .exec(url)
+          .toString()
+          .substr(7);
+        $("#dropzone-thread-id").text(threadId);
+        submitHostedDropzone(url);
+      },
+      function () {
+        $("#dropzone_form_spinner").hide();
+      }
+    );
+  }
 }
 /**
  * document ready
@@ -778,6 +873,13 @@ $(document).ready(function () {
       $("#" + element_name + "-error").text(error.text());
     }
   });
+
+  // dropzone widget
+  var placeholderElement = $('#dropzone-placeholder-div');
+  var formField = $('#sendsafely-link');
+  widget = new SendSafelyDropzone(dropzoneId, placeholderElement, formField);
+  widget.url = sendSafelyHost;
+  widget.initialize();
 });
 
 /**
