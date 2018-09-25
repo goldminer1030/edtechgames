@@ -733,11 +733,11 @@ padding-right: 10px;
   height: 100%;
   display: block;
   content: "";
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0);
   transition: all 0.8s ease 0s;
 }
 .grid-item:hover:after {
-  background-color: rgba(0,0,0,0);
+  background-color: rgba(0,0,0,0.1);
 }
 .grid-item:hover .brick-title {
   opacity: 1;
