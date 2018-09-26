@@ -439,7 +439,7 @@ function updateMasonryGrid() {
   // arrange grid item
   var grid_items = $('#part_four .grid-item').length, map = getGridMap(grid_items), map_len = map.length, grid_index = 0, window_width = $(window).width(), window_height = $(window).height(), image_loaded = 0;
   $('#part_four .grid-item').each(function (e) {
-    var grid_item = $(this), image = grid_item.find('img'), imageUrl = image.attr('src'), image_width = image.width(), image_height = image.height();
+    var grid_item = $(this), image = grid_item.find('img'), imageUrl = image.attr('src'), image_width = image.width(), image_height = image.height(), grid_item_back = grid_item.find('.grid-item-back');
     if (grid_index < map_len) {
       // if image is not loaded yet (0 on Chrome, 70 on firefox)
       if(image_width < 100) {
@@ -463,11 +463,11 @@ function updateMasonryGrid() {
       grid_item.css({
         'width': 'calc(' + w + '% - ' + (galleryItemMargin * 2) + 'px)',
         'height': 'auto',
-        'margin': galleryItemMargin + 'px',
+        'margin': galleryItemMargin + 'px'
+      });
+      // grid item background
+      grid_item_back.css({
         'background-image': 'url(../' + imageUrl + ')',
-        'background-position': 'center',
-        'cursor': 'pointer',
-        'background-size': 'cover'
       });
     } else {
       console.log('out of index error');

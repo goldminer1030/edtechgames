@@ -724,6 +724,7 @@ padding-right: 10px;
 .grid-item {
   display: inline-block;
   position: relative;
+  cursor: pointer;
 }
 .grid-item::after {
   position: absolute;
@@ -752,7 +753,30 @@ padding-right: 10px;
   background-color: white;
   padding: 7px 10px;
   opacity: 0;
+  z-index: 1;
   transition: all 0.8s ease 0s;
+}
+.grid-item .grid-item-inner {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+}
+.grid-item .grid-item-inner .grid-item-back {
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  transition: all 0.3s ease-in;
+}
+.grid-item:hover .grid-item-back {
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  -ms-transform: scale(1.1);
 }
 
 /* meida queries */

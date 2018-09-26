@@ -222,77 +222,110 @@
             <div class="grid-sizer"></div>
             
             <div class="grid-item">
-              <p class="brick-title">Unit 2 Gauntlet</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Unit 2 Gauntlet</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Gauntlet2_hd.png" data-fluidbox="true">
                 <img src="images/Gauntlet2_lg.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Character Upgrades</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Character Upgrades</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/CharUpgrade_hd.png" data-fluidbox="true">
                 <img src="images/CharUpgrade_lg.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Sentinels in Shrime 1A</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Sentinels in Shrime 1A</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Shrine1aRm2_hd.png" data-fluidbox="true">
                 <img src="images/Shrine1aRm2_sm.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Shrine 1C</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Shrine 1C</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Shrine1C_hd.png" data-fluidbox="true">
                 <img src="images/Shrine1C_sm.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Fraction Strip Story Problem</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Fraction Strip Story Problem</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Unit_1.1.2_hd.png" data-fluidbox="true">
                 <img src="images/Unit_1.1.2_sm.png" alt="screenshot">
               </a>
             </div>
 
             <div class="grid-item">
-              <p class="brick-title">Unit 1 Gauntlet</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Unit 1 Gauntlet</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Unit_1_Persp_hd.png" data-fluidbox="true">
                 <img src="images/Unit_1_Persp_sm.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Equivalent Fractions with Double Number Lines</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Equivalent Fractions with Double Number Lines</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/EquivalentFractionsNumberLines_lg.png" data-fluidbox="true">
                 <img src="images/EquivalentFractionsNumberLines_sm.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Story</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Story</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Story1_hd.png" data-fluidbox="true">
                 <img src="images/Story1_lg.png" alt="screenshot">
               </a>
             </div>
 
             <div class="grid-item">
-              <p class="brick-title"></p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Thumbnail</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Fractions2017Cavern_600.png" data-fluidbox="true">
                 <img src="images/Fractions2017Cavern_lg.png" alt="screenshot">
               </a>
             </div>
 
             <div class="grid-item">
-              <p class="brick-title">Unit 2</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Unit 2</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Unit_2.0_hd.png" data-fluidbox="true">
                 <img src="images/Unit_2.0_lg.png" alt="screenshot">
               </a>
             </div>
             
             <div class="grid-item">
-              <p class="brick-title">Draggable Fraction Pieces</p>
+              <div class="grid-item-inner">
+                <p class="brick-title">Draggable Fraction Pieces</p>
+                <div class="grid-item-back"></div>
+              </div>
               <a class="brick" href="images/Draggable-Fraction-Pieces-Square_md.png" data-fluidbox="true">
                 <img src="images/Draggable-Fraction-Pieces-Square_sm.png" alt="screenshot">
               </a>
